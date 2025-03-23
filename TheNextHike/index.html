@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NADABARKADA</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Top bar with the brand name and hamburger menu -->
+  <div class="top-bar">
+    <div class="brand-name">NADABARKADA</div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu">
+      <a href="#happenings">Happenings</a>
+      <a href="#birthdays">Birthdays</a>
+      <a href="#hikes">Hikes</a>
+      <div onclick="openModal('pnbContactModal')">Contact</div>
+    </div>
+  </div>
+
+  <!-- Start New Stuff -->
+
+  <!-- Main Content Container -->
+  <div class="container mt-5 pt-5">
+
+    <!-- Happenings Carousel Section -->
+    <section id="happenings" class="carousel-section mt-4">
+      <h2>Happenings</h2>
+      <div id="happeningsCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- First Slide -->
+          <div class="carousel-item active">
+            <img src="assets/happenings/LA_Dodgers480_480.svg.webp" class="d-block w-100" alt="Happening 1">
+            <div class="carousel-caption">
+              <h3>Dodgers 2024 World Champions</h3>
+              <p>Let's go Dodgers!</p>
+            </div>
+          </div>
+
+          <!-- Second Slide -->
+          <div class="carousel-item" onclick="window.location.href='#hikes'">
+            <img src="assets/compass_mtn_clip.webp" class="d-block w-100" alt="Happening 2">
+            <div class="carousel-caption">
+              <h3>Hiking Club!</h3>
+              <p>It's just around the corner.</p>
+            </div>
+          </div>
+
+          <!-- Third Slide -->
+          <div class="carousel-item" onclick="openModal('sinigangModal')">
+            <img src="assets/happenings/sinigang.jpg" class="d-block w-100" alt="Happening 2">
+            <div class="carousel-caption">
+              <h3>Filipino Food Challenge</h3>
+              <p>Traditional versus Fusion</p>
+            </div>
+          </div>
+
+          <!-- Third Slide -->
+          <div class="carousel-item" onclick="openModal('bucaModal')">
+            <img src="assets/happenings/A-Christmas-Brunch-Banner-1024x576.jpg" class="d-block w-100" alt="Happening 2">
+            <div class="carousel-caption">
+              <h3>Nadabarkada Christmas</h3>
+              <p>2nd annual Christmas Brunch</p>
+            </div>
+          </div>
+          <!-- Fourth Slide -->
+          <div class="carousel-item" onclick="openModal('nightHikeModal')">
+            <img src="assets/happenings/night_hike_view.jpg" class="d-block w-100" alt="Happening 2">
+            <div class="carousel-caption">
+              <h3>Friday After Thanksgiving Night Hike</h3>
+              <p>Echo Mountain</p>
+            </div>
+          </div> <!-- carousel-item -->
+
+          <div class="carousel-item" onclick="window.location.href='#birthdays'">
+            <img src="assets/happenings/birthday_cake.jpg" class="d-block w-100" alt="Happening 2">
+            <div class="carousel-caption">
+              <h3>Upcoming Birthdays</h3>
+              <p>Happy Birthday!</p>
+            </div>
+          </div> <!-- carousel-item -->
+
+
+        </div> <!-- carousel inner -->
+
+
+        <!-- Menu Controls for Carousel -->
+        <a class="carousel-control-prev" href="#happeningsCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#happeningsCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Hiking Information Cards Section -->
+    <section id="happenings-cards" class="hiking-section mt-5">
+      <h2>Events</h2>
+      <div class="row">
+        <!-- Hiking Card Example -->
+        <div class="col-md-4 mb-4">
+          <div class="card hike-card" onclick="openModal('anaheimCovesModal')">
+            <img src="assets/anahiemcoves/anaheimcoves_cover.jpg" class="card-img-top" alt="Hike Image 1">
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Nov-09</small>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Anaheim Coves Trail</h5>
+              <p class="card-text">Experience the scenic trails of Anaheim.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hiking Card Example -->
+        <!-- <div class="col-md-4 mb-4">
+            <div class="card hike-card" onclick="openModal('sawtoothModal')">
+              <img src="assets/camping/sawtooth_canyon.jpg" class="card-img-top" alt="Sawtooth Canyon">
+              <div class="card-img-overlay">
+                <small class="date-label">2024-Nov-15</small>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Sawtooth Canyon Camping</h5>
+                <p class="card-text">November 15 through 17th.</p>
+              </div>
+            </div>
+          </div> -->
+
+        <div class="col-md-4 mb-4">
+          <div class="card hike-card" onclick="openModal('pickleballModal')">
+            <img src="assets/happenings/pickleball.jpg" class="card-img-top" alt="Hike Image 1">
+            <div class="card-img-overlay">
+              <small class="date-label">TBD</small>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pickleball!</h5>
+              <p class="card-text">Let's play!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card hike-card" onclick="openModal('bucaModal')">
+            <img src="assets/happenings/A-Christmas-Brunch-Banner-1024x576.jpg" class="card-img-top" alt="Hike Image 1">
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Dec</small>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Nadabarkada Christmas Brunch</h5>
+              <p class="card-text">Another wonderful year with wonderful friends</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Hiking Details Modal Template (Dynamically Populated) -->
+  <div class="modal fade" id="hikeModal1" tabindex="-1" aria-labelledby="hikeModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hikeModal1Label">Deukmejian Loop - Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Detailed information for this hike goes here -->
+          <p>Location: Deukmejian State Park, Glendale, CA</p>
+          <p>Date: 2024-Nov-02</p>
+          <img src="assets/hike1.jpg" class="img-fluid" alt="Hike Detail Image">
+          <p>Details: Enjoy a beautiful loop with scenic views and challenging trails.</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- hikeModal1 -->
+
+  <!-- Hiking Details Modal Template (Dynamically Populated) -->
+  <div class="modal fade" id="sawtoothModal" tabindex="-1" aria-labelledby="sawtoothModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sawtoothModalTitle">Sawtooth Camping Weekend</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Detailed information for this hike goes here -->
+          <p><b>Date:</b><br>
+            <span>Nov. 15 - Nov. 17</span>
+          </p><br>
+          <p><b>Info:</b><br>
+            <span>Text us for details. We'll plan on a long hike! </span><br>
+            <span><b>Space is limited.</b></span><br>
+          </p>
+
+          <img src="assets/camping/sawtooth_canyon.jpg" class="img-fluid" alt="Hike Detail Image">
+          <p>Details: Enjoy a beautiful loop with scenic views and challenging trails.</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- hikeModal1 -->
+
+  <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pnbContactModalLabel">Hi!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/underconstruction2.webp" class="img-fluid" alt="Under Construction">
+          <!-- Detailed information for this hike goes here -->
+          <p>Thanks for visiting. This site is under construction</p>
+          <p>See you on the trails!</p>
+          <p>Feel free to shoot me an email: pandbsoftware@gmail.com</p>
+          <p>Also text me! Same number of old. - Jay</p>
+          <img src="assets/contact/solo.jpg" class="img-fluid d-block mx-auto" alt="1989">
+
+        </div>
+      </div>
+    </div>
+  </div> <!-- pnbContactModal -->
+
+  <div class="modal fade" id="alvaBirthdayModal" tabindex="-1" aria-labelledby="alvaBirthdayModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alvaBirthdayModalTitle">HAPPY BIRTHDAY, ALVA<span class="heart">&#x2764;</span>
+          </h5>
+          <!-- <p class="card-text"><b>Alva</b><span class="heart">&#x2764;</span></p> -->
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/birthdays/alva.jpg" class="img-fluid d-block mx-auto" alt="Alva">
+          <!-- Detailed information for this hike goes here -->
+        </div>
+      </div>
+    </div>
+  </div> <!-- alvaBirthdayModal -->
+
+  <!-- bucaModal -->
+  <div class="modal fade" id="bucaModal" tabindex="-1" aria-labelledby="bucaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bucaModalLabel">NadaBarkada Christmas Brunch 2024</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Detailed information for this hike goes here -->
+          <img src="assets/happenings/buca_table.avif" class="img-fluid d-block mx-auto" alt="Buca Food Image">
+          <p><b>Location:</b><br>
+            <!-- <span><a href="https://maps.app.goo.gl/fUti1fd37iwVacWj9">Buca di Bepo</span><br> -->
+            <!-- <span>80 W Green St, Pasadena, CA 91105</span></a> -->
+            TBD
+          </p>
+          <p><b>Date:</b><span>December 7, 2024</span></p>
+          <p><b>Details:</b><br>
+            <span>2nd Annual NadaBarkada Brunch</span><br>
+            <!-- <span>Please add information to <a href="https://docs.google.com/spreadsheets/d/1hhHlgXW6-ci8EHOvAJmLJc1yLcrGkS99aO33QAjArd0/edit?usp=sharing">the Google Sheet.</a></span><br> -->
+            <span>As per tradition <b>$25 White Elephant</span></b> <br>
+            <span>See everyone there!</span><br>
+            <span>More info soon!</span><br>
+            <img src="assets/happenings/nada_buca_23.jpg" class="img-fluid d-block mx-auto" alt="2023 Buca">
+          </p>
+        </div> <!-- modal-body -->
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+  </div> <!-- bucaModal -->
+
+
+  <!-- sinigangModal -->
+  <div class="modal fade" id="sinigangModal" tabindex="-1" aria-labelledby="sinigangModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sinigangModal">Homemade Filipino Food Challenge</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Detailed information for this hike goes here -->
+          <img src="assets/happenings/nilaga.png" class="img-fluid d-block mx-auto" alt="Buca Food Image">
+          <p><b>Location:</b><br>
+            <span>TBD</span>
+          </p><br>
+          <p><b>Date:</b><span>TBD</span></p>
+          <p><b>Details:</b><br>
+            <span>Let's taste everyone's version of their favorite Filipino Food for another reason to get together and
+              have fun!</span><br>
+            <span>When should we have it?</span> <br>
+          </p>
+          <ul class="indented-list">
+            <li>November 29: Right after the night hike ~8PM</li>
+            <li>November 30: Saturday</li>
+            <li>November 31: Sunday</li>
+            <li>Other Options?</li>
+          </ul>
+        </div> <!-- modal-body -->
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+  </div> <!-- bucaModal -->
+
+  <!-- anaheimCovesModal -->
+  <div class="modal fade" id="anaheimCovesModal" tabindex="-1" aria-labelledby="anaheimCovesModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="anaheimCovesModalTitle">Anaheim Coves Hike - November 9, 2024</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> <!-- modal header -->
+        <div class="modal-body">
+          <!-- <div class="content"> -->
+          <p><b>Location:</b><br>
+            <span><a href="https://www.alltrails.com/trail/us/california/anaheim-coves-trail">Anaheim Coves</a></span>
+            <br>
+          </p>
+          <p><b>Time at Trailhead:</b><span>07:30AM </span></p>
+          <p><b>Parking:</b><br><span><a href="https://maps.app.goo.gl/EfBGJKk1crjtq3SN9">Lot Parking: 2916 E. Lincoln
+                Ave., Anaheim, CA 92806 </a></span></p>
+          <p><b>Distance:</b><br><span>3.7mi, 8mi, 12.7mi</span><br></p>
+          <p><b>Route Type:</b><br><span>Wash Path Loop, No Incline</span><br></p>
+
+          <h3>Gear:</h3>
+          <!-- Gear icons should be outside the <p> tag -->
+          <div class="gear-container" id="gear-to-bring">
+            <img src="assets/backpack.png" alt="Backpack icon">
+            <img src="assets/water_bottle.jpeg" alt="Water bottle icon">
+            <img src="assets/sun_vector.png" alt="Sun icon">
+          </div> <!-- gear -->
+
+          <div id="RouteWeatherPanel">
+            <div id="Beginner" class="hike-container"> <!-- Opening container for Beginner hike level -->
+              <div class="circle"></div> <!-- Green Circle for Easy -->
+              <a href="https://www.mapmyrun.com/routes/view/6305377984" class="hike-link">
+                <!-- Opening the link for the entire block -->
+                <div class="panel"> <!-- Opening panel container -->
+                  <img src="./assets/anahiemcoves/anaheimcoves4_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                  <!-- Thumbnail image -->
+                  <div class="panel-content"> <!-- Opening content container (title + description) -->
+                    <h4 class="panel-title">Anaheim Coves 3.7</h4> <!-- Title of the panel -->
+                    <p class="panel-description">Distance (mi): 3.7, Total Ascent (ft): 75</p> <!-- Description text -->
+                  </div> <!-- Closing content container (panel-content) -->
+                </div> <!-- Closing panel container (panel) -->
+              </a> <!-- Closing the link -->
+            </div> <!-- Closing hike-container for Beginner hike level -->
+
+            <!-- Intermediate -->
+            <div id="Intermediate" class="hike-container"> <!-- Opening container for Intermediate hike level -->
+              <div class="blue-square"></div> <!-- Blue Square for Intermediate -->
+              <a href="https://www.mapmyrun.com/routes/view/6305380702" class="hike-link">
+                <!-- Opening the link for the entire block -->
+                <div class="panel"> <!-- Opening panel container -->
+                  <img src="./assets/anahiemcoves/anaheimcoves8_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                  <!-- Thumbnail image -->
+                  <div class="panel-content"> <!-- Opening content container (title + description) -->
+                    <h4 class="panel-title">Anaheim Coves 8</h4> <!-- Title of the panel -->
+                    <p class="panel-description">Distance (mi): 8.18, Total Ascent (ft): 154</p>
+                    <!-- Description text -->
+                  </div> <!-- Closing content container (panel-content) -->
+                </div> <!-- Closing panel container (panel) -->
+              </a> <!-- Closing the link -->
+            </div> <!-- Closing hike-container for Intermediate hike level -->
+
+            <!-- Expert -->
+            <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+              <div class="black-diamond"></div> <!-- First Black Diamond -->
+              <a href="https://www.mapmyrun.com/routes/view/6305387311" class="hike-link">
+                <div class="panel"> <!-- Opening panel container -->
+                  <img src="./assets/anahiemcoves/anaheimcoves13_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                  <!-- Thumbnail image -->
+                  <div class="panel-content"> <!-- Opening content container (title + description) -->
+                    <h4 class="panel-title">Anaheim Coves 13</h4> <!-- Title of the panel -->
+                    <p class="panel-description">Distance (mi): 12.6, Total Ascent (ft): 226</p>
+                    <!-- Description text -->
+                  </div> <!-- Closing content container (panel-content) -->
+                </div> <!-- Closing panel container (panel) -->
+              </a> <!-- Closing the link -->
+            </div> <!-- Closing hike-container for Expert hike level -->
+
+            <div id="WeatherWidget">
+              <a class="weatherwidget-io" href="https://forecast7.com/en/33d87n117d86/placentia/?unit=us"
+                data-label_1="PLACENTIA" data-label_2="WEATHER" data-icons="Climacons Animated"
+                data-theme="pure">PLACENTIA WEATHER</a>
+              <script>
+                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+              </script>
+            </div> <!-- WeatherWidget -->
+          </div> <!-- RouteWeatherPanel -->
+
+        </div> <!-- modal-body -->
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+  </div> <!-- anaheimCovesModal -->
+
+
+  <!-- nightHikeModal -->
+  <div class="modal fade" id="nightHikeModal" tabindex="-1" aria-labelledby="nightHikeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="nightHikeModalTitle">Day after Thanksgiving Night Hike</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> <!-- modal header -->
+        <div class="modal-body">
+          <!-- <div class="content"> -->
+          <p><b>Location:</b><br>
+            <span><a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+                Estate Trailhead Echo Mt</a></span>
+            <br>
+          </p>
+          <p><b>Time at Trailhead:</b><span>05:00PM </span></p>
+          <p><b>Parking:</b><br><span>Street parking on Lake and E Loma Alta Dr, Pasadena</span></p>
+          <p><b>Distance:</b><br><span>Distance: 5.5 Miles</span><br></p>
+          <p><b>Route Type:</b><br><span>Out and back</span><br></p>
+          <span>
+            <div class="blue-square"></div>
+            <h3>Intermediate only trail with elevation</h3>
+          </span>
+          <div id="echo-footer">
+            <iframe id="mapmyfitness_route"
+              src="https://www.mapmyrun.com/routes/view/embedded/6286213267?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+              height="679px" width="100%" frameborder="0">
+            </iframe>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+              data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              PASADENA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+              <p>View Route Details</p>
+            </a>
+          </div> <!-- echo-footer -->
+          <!-- </div> content -->
+
+        </div> <!-- modal-body -->
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+  </div> <!-- nightHikeModal -->
+
+  <!-- Birthdays -->
+  <section id="birthdays" class="hiking-section mt-5">
+    <h2>Birthdays</h2>
+    <div class="container">
+      <div class="image-container">
+        <img src="assets/birthdays/birthday_cake.webp" alt="Happy Birthday!!">
+      </div> <!-- image-container -->
+      <p><span>NOVEMBER</span></p>
+
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="card hike-card" onclick="toggleCard(this)" data-name="Cora"
+            data-baby-img="assets/birthdays/cora_kid2.jpg" data-current-img="assets/birthdays/cora_now.png">
+
+            <!-- Baby image displayed by default -->
+            <img src="assets/birthdays/cora_kid2.jpg" class="card-img-top" alt="Birthday Image">
+
+            <!-- Date overlay -->
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Nov-07</small>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+              <h5 class="card-title">Happy Birthday!</h5>
+              <p class="card-text">Click to unhide name</p>
+            </div>
+          </div> <!-- card -->
+        </div> <!-- col-md-4 mb-4 -->
+
+        <div class="col-md-4 mb-4" id="jennBirthday">
+          <div class="card hike-card" onclick="toggleCard(this)" data-name="Jen"
+            data-baby-img="assets/birthdays/jenn_kid.jpeg" data-current-img="assets/birthdays/jen_now.jpg">
+
+            <!-- Baby image displayed by default -->
+            <img src="assets/birthdays/jenn_kid.jpeg" class="card-img-top" alt="Birthday Image">
+
+            <!-- Date overlay -->
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Nov-07</small>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+              <h5 class="card-title">Happy Birthday!</h5>
+              <p class="card-text">Click to unhide name</p>
+            </div>
+          </div> <!-- card -->
+        </div> <!-- col-md-4 mb-4 Jenn -->
+
+        <!-- <div class="col-md-4 mb-4" id="alvaBirthday"> -->
+        <!-- <div class="card hike-card" onclick="openModal('alvaBirthdayModal')"> -->
+
+        <!-- Baby image displayed by default -->
+        <!-- <img src="assets/birthdays/alva.jpg" class="card-img-top" alt="Birthday Image"> -->
+
+        <!-- Date overlay -->
+        <!-- <div class="card-img-overlay"> -->
+        <!-- <small class="date-label">2024-Nov-18</small> -->
+        <!-- </div> -->
+
+        <!-- Card content -->
+        <!-- <div class="card-body"> -->
+        <!-- <h5 class="card-title">Happy Birthday!</h5> -->
+        <!-- <p class="card-text"><b>Alva</b><span class="heart">&#x2764;</span></p> -->
+        <!-- </div> -->
+        <!-- </div> card -->
+        <!-- </div> alvaBirthday -->
+
+
+        <!-- Eileen Birthday -->
+        <div class="col-md-4 mb-4" id="eileenBirthday">
+          <div class="card hike-card" onclick="toggleCard(this)" data-name="Eileen"
+            data-baby-img="assets/birthdays/eileen_kid.jpg" data-current-img="assets/birthdays/eileen_now2.jpg">
+
+            <!-- Baby image displayed by default -->
+            <img src="assets/birthdays/eileen_kid.jpg" class="card-img-top" alt="Birthday Image">
+
+            <!-- Date overlay -->
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Nov-13</small>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+              <h5 class="card-title">Happy Birthday!</h5>
+              <p class="card-text">Click to unhide name</p>
+            </div>
+          </div> <!-- card -->
+        </div> <!-- col-md-4 mb-4 Eileen -->
+
+
+
+      </div> <!-- row -->
+      <div class="row">
+        <div class="col-md-4 mb-4" id="cathyBirthday">
+          <div class="card hike-card" onclick="toggleCard(this)" data-name="Cathleen"
+            data-baby-img="assets/birthdays/cathy_kid2.jpg" data-current-img="assets/birthdays/cathy_now.jpg">
+
+            <!-- Baby image displayed by default -->
+            <img src="assets/birthdays/cathy_kid2.jpg" class="card-img-top" alt="Birthday Image">
+
+            <!-- Date overlay -->
+            <div class="card-img-overlay">
+              <small class="date-label">2024-Nov-18</small>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+              <h5 class="card-title">Happy Birthday!</h5>
+              <p class="card-text">Click to unhide name</p>
+            </div>
+          </div> <!-- card -->
+        </div> <!-- col-md-4 mb-4 Cathy -->
+
+      </div> <!-- row -->
+    </div> <!-- container -->
+
+  </section> <!-- birthdays -->
+  <!-- End New Stuff -->
+
+
+  <div class="container">
+    <section id="hikes">
+      <!-- <h1>Just Around the Corner Hiking Club</h1> -->
+
+      <!-- Image added below the title -->
+      <div class="image-container">
+        <img src="assets/compass_mtn_clip.webp" alt="Compass Mountain Vector">
+      </div>
+
+      <section id="nexthike">
+        <div id="NextHike" class="hike-section-container">
+
+          <h2>Next Hike:</h2>
+          <div id="MarshallCanyon">
+            <!-- Add a button for the collapsible section -->
+            <!-- <button class="collapsible">2025 March 16: Marshall Canyon</button> -->
+            <h3>2025 March 16, Sunday: Marshall Canyon</h3>
+            <!-- <div class="content"> -->
+            <p>
+              <strong>Location:</strong>
+              <a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58" target="_blank" rel="noopener noreferrer">
+                <b>Oak Mesa Park</b>, 5400 Wheeler Ave, La Verne, CA 91750
+              </a>
+            </p>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6151923209063!2d-117.77839828780483!3d34.130599873015505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32f9b1e9de0b5%3A0x4cc43f81bed889fc!2sOak%20Mesa%20Park!5e0!3m2!1sen!2sus!4v1741846302226!5m2!1sen!2sus"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <dl>
+              <dt><strong>Time at Trailhead:</strong></dt>
+              <dd>10:30 AM</dd>
+
+              <dt><strong>Parking:</strong></dt>
+              <dd>Parking lot at school/park</dd>
+
+              <dt><strong>Distances:</strong></dt>
+              <dd>
+                <ul>
+                  <li><strong>Easy:</strong> 4.5 miles</li>
+                  <li><strong>Moderate:</strong> 11 miles</li>
+                  <li><strong>Hard:</strong> 12 miles</li>
+                </ul>
+              </dd>
+
+
+              <dt><strong>Route Type:</strong></dt>
+              <dd>Lollypop</dd>
+            </dl>
+
+            <!-- </p> -->
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
+              data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE
+              WEATHER</a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+
+            <div id="marshall-footer">
+              <div class="circle">Easy</div>
+
+              <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-5a499f6-15?u=i&sh=t1soyj"
+                width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+              </iframe>
+              
+              <div class="blue-square">Med</div>
+              <iframe class="alltrails"
+                src="https://www.alltrails.com/widget/map/map-march-13-2025-ed27796?u=i&sh=t1soyj" width="100%"
+                height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+              </iframe>
+            </div> <!-- marshall-footer -->
+      </section>
+  </div> <!-- MarshallCanyon -->
+  </div> <!-- NextHike -->
+
+  <!-- Future Hikes -->
+  <div id="FutureHikes" class="hike-section-container">
+    <h2>Future Hikes:</h2>
+
+
+    <div id="JonesPeak">
+      <button class="collapsible">TBD: Jones Peak</button>
+      <div class="content">
+        <p>
+        <h3>Date: TBD</h3>
+        Location: <a href="https://maps.app.goo.gl/uhXtG2uabeLpmJit7" target="_blank" rel="noopener noreferrer">Baley
+          Canyon Wilderness Park</a><br>
+        Time at Trailhead: 07:00AM <br>
+        Parking: 451 W Carter Ave, Sierra Madre, CA 91024<br>
+        Distance: 6.3 Miles <br>
+        Elevation Gain: 2216 ft <br>
+        Route Type: Out & Back <br>
+        </p>
+
+        <iframe id='mapmyfitness_route'
+          src='https://www.mapmyrun.com/routes/view/5892708400?width=600&height=558&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1'
+          height='861px' width='100%' frameborder='0'>
+        </iframe>
+        <div>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+            data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+            PASADENA WEATHER
+          </a>
+          <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+          </script>
+          <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/5892708400">
+            <p>View Route Details</p>
+          </a>
+        </div> <!-- weather widget -->
+      </div> <!-- ContentDiv -->
+    </div> <!-- JonesPeak -->
+
+
+
+
+    <!-- West Fork -->
+    <div id="westfork">
+
+      <button class="collapsible">TBD: West Fork</button>
+      <div class="content">
+        <p>
+        <h3>Date: Saturday, January 11, 2025</h3>
+        Location: Azusa Avenue Angeles Crest<br>
+        Time at Trailhead: 7:30AM<br>
+        Parking: Adventure pass REQUIRED!<br>
+        Distance: Total route: 14, but can turn around anytime<br>
+        Route Type: Out and Back<br>
+        </p>
+        <div class="content">Route: <a href="https://www.mapmyrun.com/routes/view/6321933829">Angeles Crest West
+            Fork</a></div> <!-- content -->
+        <div>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/34d13n117d91/azusa/?unit=us" data-label_1="AZUSA"
+            data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">AZUSA WEATHER</a>
+          <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+          </script>
+        </div>
+
+      </div>
+    </div> <!-- West Fork -->
+
+
+    <div id="IdlehourLoop">
+      <button class="collapsible">TBD: IdleHour Loop</button>
+      <div class="content">
+        <p>
+        <h3>Date: Saturday, January 18, 2025</h3>
+        Location: <a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+          Estate Trailhead Echo Mt</a><br>
+        Time at Trailhead: 06:00AM <br>
+        Parking: Lake and E Loma Alta Dr, Pasadena<br>
+        Distance: 16.3 Miles <br>
+        Route Type: Loop
+        </p>
+
+        <iframe id='mapmyfitness_route'
+          src='https://www.mapmyfitness.com/routes/view/embedded/6290258278?width=600&height=558&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-18T05:12:03+00:00'
+          height='861px' width='100%' frameborder='0'>
+        </iframe>
+        <div>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+            data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+            PASADENA WEATHER
+          </a>
+          <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+          </script>
+          <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyfitness.com/routes/view/6290258278">
+            <p>View Route Details</p>
+          </a>
+        </div> <!-- weather widget -->
+      </div> <!-- ContentDiv -->
+    </div> <!-- IdlhourLoop -->
+
+
+
+
+
+
+    <div id="TurnbullCanyon">
+      <button class="collapsible">TBD: Turnbull</button>
+      <div class="content">
+        <p>
+        <h3>Date: </h3> <br>
+        Location: <br>
+        Time at Trailhead:<br>
+        Parking: <br>
+        Distance: 3.3, 6.1, 9.5<br>
+        Route Type: Loops<br>
+        </p>
+        <h3>Gear:</h3>
+        <!-- Gear icons should be outside the <p> tag -->
+        <div class="gear-container" id="gear-to-bring">
+          <img src="assets/backpack.png" alt="Backpack icon">
+          <img src="assets/sandwich.png" alt="Sandwich icon">
+          <img src="assets/hiking_poles.png" alt="Hiking poles icon">
+          <img src="assets/water_bottle.jpeg" alt="Water bottle icon">
+          <img src="assets/map_icon.png" alt="Map icon">
+          <img src="assets/sun_vector.png" alt="Sun icon">
+        </div>
+        <div id="RouteWeatherPanel">
+          <div id="Beginner" class="hike-container"> <!-- Opening container for Beginner hike level -->
+            <div class="circle"></div> <!-- Green Circle for Easy -->
+            <a href="https://www.mapmyrun.com/routes/view/6298566364" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/turnbull/Turnbull3_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Turnbull 3</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 3.3, Total Ascent (ft): 615</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Beginner hike level -->
+
+          <!-- Intermediate -->
+          <div id="Intermediate" class="hike-container"> <!-- Opening container for Intermediate hike level -->
+            <div class="blue-square"></div> <!-- Blue Square for Intermediate -->
+            <a href="https://www.mapmyrun.com/routes/view/6298568317" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/turnbull/Turnbull6_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Turnbull 6</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 6.1, Total Ascent (ft): 1035</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Intermediate hike level -->
+
+          <!-- Expert -->
+          <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+            <div class="black-diamond"> </div>
+            <a href="https://www.mapmyrun.com/routes/view/6298576471" class="hike-link">
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/turnbull/Turnbull9_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Turnbull 9.5</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 9.5, Total Ascent (ft): 1618</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Expert hike level -->
+          <div id="WeatherWidget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/33d99n117d97/hacienda-heights/?unit=us"
+              data-label_1="HACIENDA HEIGHTS" data-label_2="WEATHER" data-icons="Climacons Animated"
+              data-theme="pure">HACIENDA HEIGHTS WEATHER</a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div> <!-- WeatherWidget -->
+        </div> <!-- RouteWeatherPanel -->
+      </div> <!-- content -->
+    </div> <!-- Turnbull Canyon -->
+
+  </div> <!-- FutureHikes -->
+
+
+  <div id="PastHikes" class="hike-section-container">
+    <h2>Past Hikes:</h2>
+    <div id="EchoMtnLoop">
+      <!-- Add a button for the collapsible section -->
+      <button class="collapsible">2024-Oct-19: Echo Mountain</button>
+      <div class="content">
+        <p>
+        <h3>Date: Saturday, October 19, 2024</h3>
+        Location: <a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+          Estate Trailhead Echo Mt</a><br>
+        Time at Trailhead: 06:45AM <br>
+        Parking: Lake and E Loma Alta Dr, Pasadena<br>
+        Distance: 5.5 Miles<br>
+        Route Type: Out and back
+        </p>
+
+        <div id="echo-footer">
+          <iframe id="mapmyfitness_route"
+            src="https://www.mapmyrun.com/routes/view/embedded/6286213267?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+            height="679px" width="100%" frameborder="0">
+          </iframe>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+            data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+            PASADENA WEATHER
+          </a>
+          <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+          </script>
+          <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+            <p>View Route Details</p>
+          </a>
+        </div> <!-- echo-footer -->
+      </div> <!-- content -->
+    </div> <!-- EchoMtnLoop -->
+
+
+    <div id="WeirCanyon">
+      <button class="collapsible">2024-Oct-26: Weir Canyon</button>
+      <div id="info" class="content">
+        <div id="InfoPanel">
+          <h3>Date: Saturday, October 26, 2024</h3>
+          <p>
+            Location: Weir Canyon <br>
+            Info: <a href="https://hikingguy.com/hiking-trails/hiking-orange-county/hike-weir-canyon-trail/">Hiking Guy
+              Review</a><br>
+            Time at Trailhead: 07:30AM <br>
+            Parking: 6984 E Overlook Terrace, Anaheim, CA 92807, Santiago Oaks Regional Park <br>
+            Distance Options: 2.8 Mi, 4.2 / 6.8 Mi, 9.7 Mi<br>
+            Route Type: Loop, Figure-8
+          </p>
+          Gear:
+          <!-- Gear icons should be outside the <p> tag -->
+          <div class="gear-container" id="gear-to-bring">
+            <img src="assets/backpack.png" alt="Backpack icon">
+            <img src="assets/sandwich.png" alt="Sandwich icon">
+            <img src="assets/hiking_poles.png" alt="Hiking poles icon">
+            <img src="assets/water_bottle.jpeg" alt="Water bottle icon">
+            <img src="assets/map_icon.png" alt="Map icon">
+            <img src="assets/sun_vector.png" alt="Sun icon">
+          </div>
+
+          <div class="hike-description">
+            <h3>Hike Description</h3>
+            <p>
+              This hike offers little to no tree shade, so plan accordingly. Hiking boots and poles are helpful, but the
+              path resembles a running trail, so regular shoes will also work.
+            </p>
+            <p>
+              All groups are together for the first mile. Circle then makes loops it way back, while square and diamond
+              routes continue for an additional 1.25 miles, looping back to the same trail as the circle. All routes
+              eventually lead back to the starting point.
+            </p>
+            <ul>
+              <li><strong>Circle total distance:</strong> ~2.7 miles</li>
+              <li><strong>Square/Diamond current distance:</strong> ~4.2 miles</li>
+            </ul>
+            <p>
+              The square and diamond routes continue the figure 8, including some inclines that offer rewarding views of
+              Anaheim Hills. The diamond route covers a larger loop with two additional inclines, making it more
+              challenging.
+            </p>
+
+            <p>In the end, all paths reconnect and finish at the starting point.</p>
+
+            <h3>Total Distance:</h3>
+            <ul>
+              <li><strong>Circle:</strong> 2.7 miles</li>
+              <li><strong>Square:</strong>
+                <ul>
+                  <li>4.2 miles (if completing the loop)</li>
+                  <li>6.7 miles (if completing the figure 8)</li>
+                </ul>
+              </li>
+              <li><strong>Diamond:</strong> 10 miles (figure 8)</li>
+            </ul>
+          </div> <!-- hike-description -->
+        </div> <!-- InfoPanel -->
+        <h3>Routes:</h3>
+        <div id="RouteWeatherPanel">
+          <div id="Beginner" class="hike-container"> <!-- Opening container for Beginner hike level -->
+            <div class="circle"></div> <!-- Green Circle for Easy -->
+            <a href="https://www.mapmyrun.com/routes/view/6292925020" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/weircanyon/WeirCanyon3_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Weir Canyon 2.7</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 2.7, Total Ascent (ft): 280</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Beginner hike level -->
+          <!-- Intermediate -->
+          <div id="Intermediate" class="hike-container"> <!-- Opening container for Intermediate hike level -->
+            <div class="blue-square"></div> <!-- Blue Square for Intermediate -->
+            <a href="https://www.mapmyrun.com/routes/view/6293779627" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/weircanyon/WeirCanyon6_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Weir Canyon 6.8</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 6.8, Total Ascent (ft): 580</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Intermediate hike level -->
+          <!-- Expert -->
+          <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+            <div class="black-diamond"></div> <!-- Black Diamond for Expert -->
+            <a href="https://www.mapmyrun.com/routes/view/6293787922" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/weircanyon/WeirCanyon10_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Weir Canyon 9.7</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 9.7, Total Ascent (ft): 920</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Expert hike level -->
+
+          <div id="WeatherWidget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/33d84n117d91/anaheim/?unit=us"
+              data-label_1="ANAHEIM" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              ANAHEIM WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div> <!-- WeatherWidget -->
+        </div> <!-- RouteWeatherPanel -->
+      </div> <!-- Info -->
+    </div> <!-- WeirCanyon -->
+
+    <div id="DeukmejianLoop">
+      <button class="collapsible">2024-Nov-02: Deukmejian</button>
+      <div id="info" class="content">
+        <p>
+        <h3>Date: Saturday, November 2, 2024</h3>
+        Location: <a href="https://maps.app.goo.gl/qSavW1QefkEXxUAZ6">Deukmejian State Park, Glendale, CA</a><br>
+        Time at Trailhead: 08:00AM <br>
+        Parking: <a href="https://maps.app.goo.gl/jxnsgpuEYZ2QdGwz6">Deukmejian State Park</a><br>
+        Distance: 1.9 Miles, 2.8 Miles, 6.5 Miles<br>
+        Route Type: Loop - <a href="https://www.mapmyrun.com/routes/view/6292901614">Optional +4mi</a>
+        </p>
+        <h3>Gear:</h3>
+        <!-- Gear icons should be outside the <p> tag -->
+        <div class="gear-container" id="gear-to-bring">
+          <img src="assets/backpack.png" alt="Backpack icon">
+          <img src="assets/hiking_poles.png" alt="Hiking poles icon">
+          <img src="assets/water_bottle.jpeg" alt="Water bottle icon">
+          <img src="assets/sun_vector.png" alt="Sun icon">
+        </div>
+        <div id="RouteWeatherPanel">
+          <div id="Beginner" class="hike-container"> <!-- Opening container for Beginner hike level -->
+            <div class="circle"></div> <!-- Green Circle for Easy -->
+            <a href="https://www.mapmyrun.com/routes/view/6295671397" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/deukmejian/Deukmejian2_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Deukmejian 2</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 1.9, Total Ascent (ft): 406</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Beginner hike level -->
+
+          <!-- Intermediate -->
+          <div id="Intermediate" class="hike-container"> <!-- Opening container for Intermediate hike level -->
+            <div class="blue-square"></div> <!-- Blue Square for Intermediate -->
+            <a href="https://www.mapmyrun.com/routes/view/6292902769" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/deukmejian/Deukmejian3_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Deukmejian 3</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 2.8, Total Ascent (ft): 748</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Intermediate hike level -->
+
+          <!-- Expert -->
+          <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+            <div class="double-black-diamond">
+              <div class="black-diamond"></div> <!-- First Black Diamond -->
+              <div class="black-diamond"></div> <!-- Second Black Diamond -->
+            </div>
+            <a href="https://www.mapmyrun.com/routes/view/6293787922" class="hike-link">
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/deukmejian/Deukmejian7_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Deukmejian 6.5</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 6.5, Total Ascent (ft): 1732</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Expert hike level -->
+
+          <div id="WeatherWidget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d23n118d24/la-crescenta-montrose/?unit=us"
+              data-label_1="LA CRESCENTA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              LA CRESCENTA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div> <!-- WeatherWidget -->
+        </div> <!-- RouteWeatherPanel -->
+      </div> <!-- content -->
+    </div> <!-- DeukmejianLoop -->
+
+
+
+    <div id="AnaheimCoves">
+      <button class="collapsible">2024-Nov-09: Anaheim Coves</button>
+      <div id="info" class="content">
+        <p>
+        <h3>Date: Saturday, November 9, 2024</h3>
+        Location: <a href="https://www.alltrails.com/trail/us/california/anaheim-coves-trail">Anaheim Coves</a>
+        Time at Trailhead: 08:00AM <br>
+        Parking: <a href="https://maps.app.goo.gl/EfBGJKk1crjtq3SN9"> 2916 E. Lincoln Ave., Anaheim, CA 92806 </a><br>
+        Distance: 3.7mi, 8mi, 12.7mi <br>
+        Route Type: Wash Path Loop, No Incline
+        </p>
+        <h3>Gear:</h3>
+        <!-- Gear icons should be outside the <p> tag -->
+        <div class="gear-container" id="gear-to-bring">
+          <img src="assets/backpack.png" alt="Backpack icon">
+          <img src="assets/water_bottle.jpeg" alt="Water bottle icon">
+          <img src="assets/sun_vector.png" alt="Sun icon">
+        </div>
+        <div id="RouteWeatherPanel">
+          <div id="Beginner" class="hike-container"> <!-- Opening container for Beginner hike level -->
+            <div class="circle"></div> <!-- Green Circle for Easy -->
+            <a href="https://www.mapmyrun.com/routes/view/6305377984" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="./assets/anahiemcoves/anaheimcoves4_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Anaheim Coves 3.7</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 3.7, Total Ascent (ft): 75</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Beginner hike level -->
+
+          <!-- Intermediate -->
+          <div id="Intermediate" class="hike-container"> <!-- Opening container for Intermediate hike level -->
+            <div class="blue-square"></div> <!-- Blue Square for Intermediate -->
+            <a href="https://www.mapmyrun.com/routes/view/6305380702" class="hike-link">
+              <!-- Opening the link for the entire block -->
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="./assets/anahiemcoves/anaheimcoves8_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Anaheim Coves 8</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 8.18, Total Ascent (ft): 154</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Intermediate hike level -->
+
+          <!-- Expert -->
+          <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+            <div class="black-diamond"></div> <!-- First Black Diamond -->
+            <a href="https://www.mapmyrun.com/routes/view/6305387311" class="hike-link">
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="./assets/anahiemcoves/anaheimcoves13_tn.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Anaheim Coves 13</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 12.6, Total Ascent (ft): 226</p> <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Expert hike level -->
+
+          <div id="WeatherWidget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/33d87n117d86/placentia/?unit=us"
+              data-label_1="PLACENTIA" data-label_2="WEATHER" data-icons="Climacons Animated"
+              data-theme="pure">PLACENTIA WEATHER</a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div> <!-- WeatherWidget -->
+        </div> <!-- RouteWeatherPanel -->
+      </div> <!-- content -->
+    </div> <!-- AnaheimCoves -->
+
+    <div id="EchoMtnLoop">
+      <!-- Add a button for the collapsible section -->
+      <button class="collapsible">2024-Nov-24 (Day): Echo Mountain</button>
+      <div class="content">
+        <p>
+          Location: <a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+            Estate Trailhead Echo Mt</a><br>
+          Time at Trailhead: 08:00AM <br>
+          Parking: Lake and E Loma Alta Dr, Pasadena<br>
+          Distance: 5.5 Miles<br>
+          Route Type: Out and back<br>
+        <div class="blue-square"></div>
+        </p>
+
+        <div id="echo-footer">
+          <iframe id="mapmyfitness_route"
+            src="https://www.mapmyrun.com/routes/view/embedded/6286213267?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+            height="679px" width="100%" frameborder="0">
+          </iframe>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+            data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+            PASADENA WEATHER
+          </a>
+          <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+          </script>
+          <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+            <p>View Route Details</p>
+          </a>
+        </div> <!-- echo-footer -->
+      </div> <!-- content -->
+    </div> <!-- EchoMtnLoop -->
+
+
+    <!-- West Fork -->
+    <div id="westfork">
+
+      <button class="collapsible">2024-Dec-1: West Fork</button>
+      <div class="content">
+        <p>
+        <h3>Date: Saturday, December 7, 2024</h3>
+        Location: Azusa Avenue Angeles Crest
+        Time at Trailhead: 7:30AM
+        Parking: Adventure pass REQUIRED!
+        Distance: Total route: 14, but can turn around anytime
+        Route Type: Out and Back
+        </p>
+        <div class="content">Route: <a href="https://www.mapmyrun.com/routes/view/6321933829">Angeles Crest West
+            Fork</a>
+        </div> <!-- content -->
+      </div> <!-- West Fork -->
+
+
+
+      <div id="Gabriellano">
+        <!-- Add a button for the collapsible section -->
+        <button class="collapsible">2024-Dec-7: Gabriellano Trail (JPL)</button>
+        <div class="content">
+          <p>
+            Location: JPL, Pasadena<br>
+            Time at Trailhead: 09:00AM <br>
+            Parking: <a href="https://maps.app.goo.gl/xMycKCDqAnGevo3B9" target="_blank" rel="noopener noreferrer">JPL
+              East Lot Parking</a><br>
+            Distance: 5.9 Miles<br>
+            Route Type: Out and back<br>
+          <div class="circle"></div>
+          </p>
+
+          <div id="jpl-footer">
+            <iframe id="mapmyfitness_route"
+              src="https://www.mapmyrun.com/routes/view/6345969763x?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+              height="679px" width="100%" frameborder="0">
+            </iframe>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+              data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              PASADENA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+              <p>View Route Details</p>
+            </a>
+          </div> <!-- jpl-footer -->
+        </div> <!-- content -->
+      </div> <!-- end Gabriellano -->
+
+
+
+      <div id="FreeHike">
+        <!-- Add a button for the collapsible section -->
+        <button class="collapsible">2024-Dec-14: Free Day / Bench</button>
+        <div class="content">
+          <p>
+            Location: Free day to hike anywhere / La Canada<br>
+            Distance: TBD / 10 Miles<br>
+            Route Type: TBD / Loops<br>
+          </p>
+
+          <div id="jpl-footer">
+
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+              data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              PASADENA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+          </div> <!-- free-footer -->
+        </div> <!-- content -->
+      </div> <!-- end Gabriellano -->
+
+      <div id="EchoMtnLoop">
+        <!-- Add a button for the collapsible section -->
+        <button class="collapsible">2024-Dec-21: Echo Mountain</button>
+        <div class="content">
+          <p>
+            Location: <a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+              Estate Trailhead Echo Mt</a><br>
+            Time at Trailhead: 05:00PM <br>
+            Parking: Lake and E Loma Alta Dr, Pasadena<br>
+            Distance: 5.5 Miles<br>
+            Route Type: Out and back<br>
+          <div class="blue-square"></div>
+          </p>
+
+          <div id="echo-footer">
+            <iframe id="mapmyfitness_route"
+              src="https://www.mapmyrun.com/routes/view/embedded/6286213267?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+              height="679px" width="100%" frameborder="0">
+            </iframe>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+              data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              PASADENA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+              <p>View Route Details</p>
+            </a>
+          </div> <!-- echo-footer -->
+        </div> <!-- content -->
+      </div> <!-- EchoMtnLoop -->
+
+
+      <div id="EchoMtnLoop">
+        <!-- Add a button for the collapsible section -->
+        <button class="collapsible">2024-Dec-28: Echo Mountain / Idlehour Loop</button>
+        <div class="content">
+          <p>
+            Location: <a href="https://maps.app.goo.gl/MKkJGizo9MwuxVTw8" target="_blank" rel="noopener noreferrer">Cobb
+              Estate Trailhead Echo Mt</a><br>
+            Time at Trailhead: 06:30AM <br>
+            Parking: Lake and E Loma Alta Dr, Pasadena<br>
+            Distance: 5.5 mi / 16.5 mi<br>
+            Route Type: Out and back / Loop<br>
+          </p>
+
+          <div id="echo-footer">
+            <div class="blue-square"></div>
+
+            <iframe id="mapmyfitness_route"
+              src="https://www.mapmyrun.com/routes/view/embedded/6286213267?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+              height="679px" width="100%" frameborder="0">
+            </iframe>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d15n118d14/pasadena/?unit=us"
+              data-label_1="PASADENA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              PASADENA WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6286213267">
+              <p>View Route Details</p>
+            </a>
+          </div> <!-- echo-footer -->
+
+          <!-- Expert -->
+          <div id="Expert" class="hike-container"> <!-- Opening container for Expert hike level -->
+            <div class="black-diamond"> </div>
+            <a href="https://www.mapmyrun.com/routes/view/6290258278" class="hike-link">
+              <div class="panel"> <!-- Opening panel container -->
+                <img src="assets/echo/idlehour_16.png" alt="Thumbnail Image" class="panel-thumbnail">
+                <!-- Thumbnail image -->
+                <div class="panel-content"> <!-- Opening content container (title + description) -->
+                  <h4 class="panel-title">Idlehour Loop 16.3</h4> <!-- Title of the panel -->
+                  <p class="panel-description">Distance (mi): 16.3, Total Ascent (ft): 4166</p>
+                  <!-- Description text -->
+                </div> <!-- Closing content container (panel-content) -->
+              </div> <!-- Closing panel container (panel) -->
+            </a> <!-- Closing the link -->
+          </div> <!-- Closing hike-container for Expert hike level -->
+        </div> <!-- content -->
+      </div> <!-- EchoMtnLoop -->
+
+
+
+      <div id="Carbon Canyon Redwoods">
+        <button class="collapsible">2025-Jan-4: Carbon Canyon Redwoods</button>
+
+        <div class="content">
+          <p>
+          <h3>Date: Saturday, January 4, 2025</h3> <br>
+          Location: Carbon Canyon, Chino Hills <br>
+          Time at Trailhead: 7:30AM<br>
+          Parking: Free lot (2 blocks away) / Paid Parking (Start)<br>
+          Distance: Total route: 14, but can turn around anytime<br>
+          Route Type: Out and Back<br>
+          </p>
+          <!-- <div class="responsive-iframe">
+            <iframe 
+                class="hike-iframe"
+                title="Example Primary Pollutant with Weather" 
+                src="https://widget.airnow.gov/aq-dial-widget-pollutant-weather/index.html?city=Chino%20Hills&state=CA&country=USA">
+            </iframe>
+          </div> -->
+
+
+
+          <div id="echo-footer">
+            <iframe id="mapmyfitness_route"
+              src="https://www.mapmyfitness.com/routes/view/6367503349/?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=ROADMAP&show_marker_every=1&last_updated=2024-10-15T06:52:36+00:00"
+              height="679px" width="100%" frameborder="0">
+            </iframe>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.mapmyrun.com/routes/view/6276462301">
+              <p>View Route Details</p>
+            </a>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/33d99n117d73/chino-hills/?unit=us"
+              data-label_1="CHINO HILLS" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+              CHINO HILLS WEATHER
+            </a>
+            <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+            <br>
+            <br>
+
+          </div> <!-- echo-footer -->
+        </div> <!-- content -->
+      </div> <!-- Carbon Canyon -->
+
+
+
+
+
+    </div> <!-- PastHikes -->
+  </div> <!-- Container Div -->
+
+  <script src="main.js"></script>
+  <!-- Bootstrap and Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  </section>
+</body>
+
+</html>
