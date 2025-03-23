@@ -2,8 +2,8 @@
 .container {
   max-width: 900px;           /* Sets a maximum width for readability */
   margin: 0 auto;              /* Centers the container on the page */
-  padding: 20px;               /* Padding inside the container for spacing */
-  margin-top: 80px;            /* Adds space to prevent overlap with the fixed top bar */
+  padding: 0px;               /* Padding inside the container for spacing */
+  margin-top: 0px;            /* Adds space to prevent overlap with the fixed top bar */
 }
 
 /* Styling for the main image container */
