@@ -663,7 +663,7 @@ p {
   padding-top: 80px;
 }
 
-.circle, .blue-square {
+.circle, .blue-square, .black-diamond {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -688,6 +688,12 @@ p {
   height: 80px;
   background-color: blue; /* Blue background */
   margin: 10px auto; /* Centers it */
+}
+
+.black-diamond {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto; /* Centers it */
 }
 
 .site-footer {
