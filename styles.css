@@ -657,6 +657,12 @@ p {
   padding-top: 80px;
 }
 
+#futurehike {
+  position: relative;
+  top: -80px; /* Adjust to shift the element upwards */
+  padding-top: 80px;
+}
+
 .circle, .blue-square {
   display: flex;
   align-items: center;
