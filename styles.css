@@ -722,3 +722,19 @@ dl dd {
   text-align: center;
 
 }
+
+.gpx-link {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.gpx-link a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gpx-link a:hover {
+  text-decoration: underline;
+}
+
