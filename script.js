@@ -48,3 +48,26 @@ function toggleMenu() {
 function openModal(modalId) {
   $('#' + modalId).modal('show');
 }
+
+// GPX download handler
+function forceDownload(event) {
+  event.preventDefault();
+  const link = event.currentTarget;
+  const url = link.getAttribute("href");
+  const fileName = url.split('/').pop();
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.setAttribute("download", fileName);
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// Attach GPX download handler after DOM loads
+document.addEventListener("DOMContentLoaded", function () {
+  // Attach to all links with class .gpx-download
+  document.querySelectorAll('.gpx-download').forEach(link => {
+    link.addEventListener('click', forceDownload);
+  });
+});
