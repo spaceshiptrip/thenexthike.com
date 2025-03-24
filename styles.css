@@ -683,3 +683,26 @@ p {
   background-color: blue; /* Blue background */
   margin: 10px auto; /* Centers it */
 }
+
+.site-footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #f5f5f5;
+  color: #555;
+  font-size: 0.9em;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+.site-footer p {
+  margin: 0.3em 0; /* Adds a little space between lines */
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #0077cc;
+}
