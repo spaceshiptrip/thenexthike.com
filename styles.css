@@ -710,3 +710,13 @@ p {
 dl dd {
   margin-left: 1.5em; /* prevent double indentation */
 }
+
+.info-box {
+  background-color: #fff8b3; /* soft yellow */
+  border-left: 4px solid #ffcc00; /* optional accent */
+  padding: 1em;
+  margin: 1em 0;
+  font-size: 0.95em;
+  color: #333;
+  border-radius: 6px;
+}
