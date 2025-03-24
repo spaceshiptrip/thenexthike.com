@@ -706,3 +706,7 @@ p {
 .site-footer a:hover {
   color: #0077cc;
 }
+
+dl dd {
+  margin-left: 1.5em; /* prevent double indentation */
+}
