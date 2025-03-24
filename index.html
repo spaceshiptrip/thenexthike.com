@@ -70,70 +70,58 @@
           <div id="NextHike" class="hike-section-container">
     
             <h2>Next Hike:</h2>
-            <div id="MarshallCanyon">
-              <!-- Add a button for the collapsible section -->
-              <!-- <button class="collapsible">2025 March 16: Marshall Canyon</button> -->
-              <button class="collapsible">2025 March 16: Marshall Canyon</button>
-              <div class="content">
-    
-                <h3>2025 March 16, Sunday: Marshall Canyon</h3>
-                <!-- <div class="content"> -->
+
+            <div id="LukensViaDeuk">
+                <h3>2025 March 29, Saturday: Lukens Via Deukmejian</h3>
+                
                 <p>
                   <strong>Location:</strong>
-                  <a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58" target="_blank" rel="noopener noreferrer">
-                    <b>Oak Mesa Park</b>, 5400 Wheeler Ave, La Verne, CA 91750
+                  <a href="https://maps.app.goo.gl/6z2WVXBVf8Zk7dEx5" target="_blank" rel="noopener noreferrer">
+                    <b>Deukmejian Wilderness Park</b>, 3429 Markridge Rd, Glendale, CA 91214
                   </a>
+                
                 </p>
-    
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6151923209063!2d-117.77839828780483!3d34.130599873015505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32f9b1e9de0b5%3A0x4cc43f81bed889fc!2sOak%20Mesa%20Park!5e0!3m2!1sen!2sus!4v1741846302226!5m2!1sen!2sus"
-                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.9605614656653!2d-118.25589948780113!3d34.24954997297112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2eb9c6e8602b5%3A0x6d8a0c67e0ba1acd!2sDeukmejian%20Wilderness%20Park!5e0!3m2!1sen!2sus!4v1742793428725!5m2!1sen!2sus" 
+                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
     
                 <dl>
                   <dt><strong>Time at Trailhead:</strong></dt>
-                  <dd>10:30 AM</dd>
+                  <dd>7:30 AM</dd>
     
                   <dt><strong>Parking:</strong></dt>
-                  <dd>Parking lot at school/park</dd>
+                  <dd>Parking lot at park</dd>
     
-                  <dt><strong>Distances:</strong></dt>
+                  <dt><strong>Distance:</strong></dt>
                   <dd>
                     <ul>
-                      <li><strong>Easy:</strong> 4.5 miles</li>
-                      <li><strong>Moderate:</strong> 11 miles</li>
-                      <li><strong>Hard:</strong> 12 miles</li>
+                      <li><strong>Moderate:</strong> 10 miles / 2800' Elevation Gain</li>
                     </ul>
                   </dd>
                   <dt><strong>Route Type:</strong></dt>
-                  <dd>Lollypop</dd>
+                  <dd>Loop</dd>
                 </dl>
     
-                <!-- </p> -->
-                <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
-                  data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
-                </a>
-                <script>
-                      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                </script>
+                <div id="WeatherWidget">
+                  <a class="weatherwidget-io" href="https://forecast7.com/en/34d23n118d24/la-crescenta-montrose/?unit=us"
+                    data-label_1="LA CRESCENTA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">
+                    LA CRESCENTA WEATHER
+                  </a>
+                  <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                  </script>
+                </div> 
+              
     
-                <div id="marshall-footer">
-                  <div class="circle">Easy</div>
-                  <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-5a499f6-15?u=i&sh=t1soyj"
-                    width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                    title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
-                  </iframe>
-    
+                <div id="lukens-footer">
                   <div class="blue-square">Med</div>
-                  <iframe class="alltrails"
-                    src="https://www.alltrails.com/widget/map/map-march-13-2025-ed27796?u=i&sh=t1soyj" width="100%"
-                    height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-773fc30-15?u=i&sh=t1soyj" 
+                    width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
                     title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
                   </iframe>
-                </div> <!-- marshall-footer -->
-              </div> <!-- content -->
-            </div> <!-- MarshallCanyon -->
+                </div> 
+            </div> <!-- LukensViaDeuk -->
           </div> <!-- NextHike -->
         </section> <!-- nexthike -->
 
@@ -324,6 +312,74 @@
 
   <div id="PastHikes" class="hike-section-container">
     <h2>Past Hikes:</h2>
+
+
+    <div id="MarshallCanyon">
+      <!-- Add a button for the collapsible section -->
+      <!-- <button class="collapsible">2025 March 16: Marshall Canyon</button> -->
+      <button class="collapsible">2025 March 16: Marshall Canyon</button>
+      <div class="content">
+
+        <h3>2025 March 16, Sunday: Marshall Canyon</h3>
+        <!-- <div class="content"> -->
+        <p>
+          <strong>Location:</strong>
+          <a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58" target="_blank" rel="noopener noreferrer">
+            <b>Oak Mesa Park</b>, 5400 Wheeler Ave, La Verne, CA 91750
+          </a>
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6151923209063!2d-117.77839828780483!3d34.130599873015505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32f9b1e9de0b5%3A0x4cc43f81bed889fc!2sOak%20Mesa%20Park!5e0!3m2!1sen!2sus!4v1741846302226!5m2!1sen!2sus"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <dl>
+          <dt><strong>Time at Trailhead:</strong></dt>
+          <dd>10:30 AM</dd>
+
+          <dt><strong>Parking:</strong></dt>
+          <dd>Parking lot at school/park</dd>
+
+          <dt><strong>Distances:</strong></dt>
+          <dd>
+            <ul>
+              <li><strong>Easy:</strong> 4.5 miles</li>
+              <li><strong>Moderate:</strong> 11 miles</li>
+              <li><strong>Hard:</strong> 12 miles</li>
+            </ul>
+          </dd>
+          <dt><strong>Route Type:</strong></dt>
+          <dd>Lollypop</dd>
+        </dl>
+
+        <!-- </p> -->
+        <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
+          data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
+        </a>
+        <script>
+              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+
+        <div id="marshall-footer">
+          <div class="circle">Easy</div>
+          <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-5a499f6-15?u=i&sh=t1soyj"
+            width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+          </iframe>
+
+          <div class="blue-square">Med</div>
+          <iframe class="alltrails"
+            src="https://www.alltrails.com/widget/map/map-march-13-2025-ed27796?u=i&sh=t1soyj" width="100%"
+            height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+          </iframe>
+        </div> <!-- marshall-footer -->
+      </div> <!-- content -->
+    </div> <!-- MarshallCanyon -->
+
+
     <div id="EchoMtnLoop">
       <!-- Add a button for the collapsible section -->
       <button class="collapsible">2024-Oct-19: Echo Mountain</button>
