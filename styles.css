@@ -369,11 +369,14 @@ p {
   }
 }
 
+
+/* THIS CONTROLS THE MOBILE CONTAINER */
+
 /* Adjust container padding for smaller screens */
 @media (max-width: 600px) {
   .container {
     padding: 0 0;            /* Left and right padding only 1% on smaller screens */
-    margin-top: 80px;         /* Keeps the top margin to avoid overlap with fixed top bar */
+    margin-top: 80px;        /* Keeps the top margin to avoid overlap with fixed top bar */
   }
 
   .hike-section-container {
@@ -783,5 +786,12 @@ dl dd {
   .hike-where,
   .hike-time {
     flex: 0 1 auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #nexthike .hike-header {
+    margin-top: -10px; /* Adjust as needed */
   }
 }
