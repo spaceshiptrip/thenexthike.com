@@ -820,3 +820,22 @@ dl dd {
 .distance-table tr:nth-child(even) {
   background-color: #fafafa;
 }
+
+
+.section-divider {
+  text-align: center;
+  margin: 2em 0; /* Adjust spacing between sections */
+}
+
+.section-divider img {
+  width: 60px;
+  height: auto;
+  opacity: 0.8; /* Slight fade for subtlety */
+}
+
+/* Optional: scale it slightly down on very small screens */
+@media (max-width: 480px) {
+  .section-divider img {
+    width: 40px;
+  }
+}
