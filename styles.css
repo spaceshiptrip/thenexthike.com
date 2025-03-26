@@ -824,13 +824,15 @@ dl dd {
 
 .section-divider {
   text-align: center;
-  margin: 2em 0; /* Adjust spacing between sections */
+  margin: 1em 0; /* Adjust spacing between sections */
+  padding-top: -2em;
 }
 
 .section-divider img {
   width: 60px;
   height: auto;
   opacity: 0.8; /* Slight fade for subtlety */
+  padding-bottom: 2em;
 }
 
 /* Optional: scale it slightly down on very small screens */
