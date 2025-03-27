@@ -854,3 +854,17 @@ dl dd {
   opacity: 0.8; /* Optional: slight transparency */
 }
 
+
+
+.map-info {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.map-info img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 0.5em;
+  opacity: 0.8; /* Optional: slight transparency */
+}
+
