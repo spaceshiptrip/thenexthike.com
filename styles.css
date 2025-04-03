@@ -877,3 +877,14 @@ dl dd {
   opacity: 0.8; /* Optional: slight transparency */
 }
 
+
+.btn-primary {
+  background-color: #2b7a78;
+  border-color: #2b7a78;
+}
+
+.btn-primary:hover {
+  background-color: #205d5c;
+  border-color: #205d5c;
+}
+
