@@ -83,7 +83,7 @@ p {
   left: -40px;                 /* Positions icon to the left */
   top: 50%;                    /* Centers icon vertically */
   transform: translateY(-50%); /* Centers icon exactly */
-  transition: transform 0.3s, background-color 0.3s, content 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .collapsible.active::before {
@@ -168,8 +168,10 @@ p {
   align-items: center;
 }
 
-.circle .blue-square .double-black-diamond .black-diamond {
-  margin-right: 5px;           /* Space between diamonds */
+.circle,
+.blue-square,
+.double-black-diamond .black-diamond {
+  margin-right: 5px;
 }
 
 .hike-section-container {
@@ -293,6 +295,13 @@ p {
   top: 0; /* Fixes it to the top of the viewport */
   left: 0;
   z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Override ONLY for small screens */
+@media (max-width: 600px) {
+  .top-bar {
+    position: sticky; /* Less crash-prone on iOS Safari */
+  }
 }
 
 .top-bar .brand-name {
