@@ -310,6 +310,16 @@ p {
   margin-left: 20px;
 }
 
+.brand-name a {
+  color: white;
+  text-decoration: none;
+}
+
+.brand-name a:hover {
+  text-decoration: underline;
+}
+
+
 /* Hamburger menu styling */
 .hamburger-menu {
   display: none;
