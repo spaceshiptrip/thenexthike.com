@@ -36,6 +36,7 @@
   <!-- Main Content Container -->
   <div class="container mt-5 pt-5">
     <section id="happenings" class="carousel-section mt-4">
+      <div id="route1Content"></div>
       <!-- contact info stuff -->
       <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel"
         aria-hidden="true">
@@ -147,10 +148,26 @@
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             
+              <!-- Air Quality Widget -->
+              <div class="aqi-widget-container d-flex flex-column align-items-center gap-3">
+                <div class="aqi-widget-wrapper">
+                  <div class="aqi-widget-item d-flex justify-content-center">
+                    <iframe title="La Verne AQI Flag" height="450" src="https://widget.airnow.gov/aq-flag-widget/?z=91750&n=La%20Verne,%20CA" style="border: none;" width="230"></iframe>
+                  </div>
+                </div>
+                <div class="aqi-widget-fallback" style="display: none;">
+                  <div class="alert alert-warning">
+                    <strong>Widget Loading Issue:</strong> The AQI widget is currently unavailable.<br>
+                    <small>Please check back later or visit <a href="https://www.airnow.gov/" target="_blank">AirNow.gov</a> for current air quality information.</small>
+                  </div>
+                </div>
+              </div>
+
               <!-- WeatherWidget -->
               <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
                 data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
               </a>
+
 
               <div id="marshall-footer">
                 <div class="map-info">
@@ -202,6 +219,51 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- AQI Widget Error Handling -->
+    <script>
+      // Add error handling for the AQI widget
+      const iframe = document.querySelector('.aqi-widget-container iframe');
+      const fallback = document.querySelector('.aqi-widget-fallback');
+
+      if (!iframe) {
+        console.error('AQI iframe element not found');
+        fallback.style.display = 'block';
+        return;
+      }
+
+      // Check if iframe is loaded
+      iframe.onload = function() {
+        console.log('AQI widget loaded');
+        try {
+          const content = iframe.contentWindow.document.body.innerHTML.trim();
+          if (!content) {
+            console.error('AQI widget loaded but is empty');
+            fallback.style.display = 'block';
+            iframe.style.display = 'none';
+          }
+        } catch (e) {
+          console.error('Error accessing iframe content:', e);
+          fallback.style.display = 'block';
+          iframe.style.display = 'none';
+        }
+      };
+
+      // Handle loading errors
+      iframe.onerror = function() {
+        console.error('AQI widget failed to load');
+        fallback.style.display = 'block';
+        iframe.style.display = 'none';
+      };
+
+      // Check after 5 seconds if it hasn't loaded
+      setTimeout(() => {
+        if (!iframe.contentWindow || !iframe.contentWindow.document.body.innerHTML.trim()) {
+          console.error('AQI widget timed out');
+          fallback.style.display = 'block';
+          iframe.style.display = 'none';
+        }
+      }, 5000);
+    </script>
 
     <footer class="site-footer">
     <p>© Just Around the Corner Hiking Club • Est. 2023</p>
