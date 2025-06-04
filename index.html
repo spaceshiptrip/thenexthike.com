@@ -147,21 +147,15 @@
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             
+              <!-- WeatherWidget -->
               <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
                 data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
               </a>
-              <script>
-                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-              </script>
-
-
 
               <div id="marshall-footer">
-
                 <div class="map-info">
                   <img src="assets/MapVector2.png" alt="Map Icon">
                 </div>
-
 
                 <div class="circle">Easy</div>
                 <p style="text-align: center;">4.5 Miles, 400' Elev Gain</p>
@@ -203,7 +197,7 @@
       </div>
     </div> <!-- Container Div -->
 
-    <script src="main.js"></script>
+    <script src="route-loader.js"></script>
     <!-- Bootstrap and Custom JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -220,6 +214,11 @@
       <a href="https://github.com/spaceshiptrip">SpaceshipTrip</a>
     </p>
   </footer>
+
+  <!-- WeatherWidget -->
+  <script defer>
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+  </script>
 </body>
 
 </html>
