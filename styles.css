@@ -8,9 +8,11 @@
   --spacing-small: 10px;
   --spacing-medium: 20px;
   --spacing-large: 30px;
+  --transition-speed: 0.2s;
+  --transition-ease: ease-out;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,6 +22,8 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container and Layout */
@@ -85,6 +89,8 @@ p {
   margin-bottom: var(--spacing-small);
   margin-left: 40px;
   position: relative;
+  will-change: background-color, transform;
+  transition: background-color var(--transition-speed) var(--transition-ease);
 }
 
 .collapsible:hover {
@@ -102,7 +108,8 @@ p {
   left: -40px;
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.3s, background-color 0.3s;
+  will-change: transform;
+  transition: var(--transition-speed) var(--transition-ease);
 }
 
 .collapsible.active::before {
@@ -117,7 +124,8 @@ p {
   display: block;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  will-change: max-height;
+  transition: max-height var(--transition-speed) var(--transition-ease);
 }
 
 .collapsible.active {
@@ -166,12 +174,15 @@ p {
   height: 300px;
   border: none;
   overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .responsive-iframe {
   position: relative;
   overflow: hidden;
   padding-top: 30%;
+  will-change: transform;
 }
 
 .responsive-iframe .hike-iframe {
@@ -180,6 +191,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  will-change: transform;
 }
 
 /* Grid Layout */
@@ -229,6 +241,11 @@ p {
   .collapsible::before {
     left: 0;
   }
+
+  .hike-level {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
@@ -238,6 +255,10 @@ p {
 
   .hike-container {
     grid-template-columns: 1fr;
+  }
+
+  .gear-container {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   }
 }  width: 40px; /* Consistent width */
   height: 40px; /* Consistent height */
