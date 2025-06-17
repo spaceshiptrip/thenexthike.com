@@ -2,215 +2,285 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THE NEXT HIKE</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE NEXT HIKE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <!-- Top bar with the brand name and hamburger menu -->
-  <div class="top-bar">
-    <div class="brand-name">
-      <a href="index.html">THE NEXT HIKE</a>
-    </div>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="menu">
-      <a href="index.html">Next Hike</a>
-      <a href="futurehike.html">Future Hike</a>
-
-      <div onclick="openModal('pnbContactModal')">Contact</div>
-    </div>
-  </div>
-
-  <!-- Start New Stuff -->
-
-  <!-- Main Content Container -->
-  <div class="container mt-5 pt-5">
-    <!-- Contact Modal -->
-    <section id="happenings" class="carousel-section mt-4">
-      <div id="route1Content"></div>
-      <!-- contact info stuff -->
-      <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="pnbContactModalLabel">Hi!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img src="assets/underconstruction2.webp" class="img-fluid" alt="Under Construction">
-              <!-- Detailed information for this hike goes here -->
-              <p>Thanks for visiting. This site is under construction</p>
-              <p>See you on the trails!</p>
-              <p>Feel free to shoot me an email: pandbsoftware@gmail.com</p>
-              <p>Also text me! Same number of old. - Jay</p>
-              <img src="assets/contact/solo.jpg" class="img-fluid d-block mx-auto" alt="1989">
-            </div>
-          </div>
+    <!-- Top bar with the brand name and hamburger menu -->
+    <div class="top-bar">
+        <div class="brand-name">
+            <a href="index.html">THE NEXT HIKE</a>
         </div>
-      </div> <!-- pnbContactModal -->
-    </section> <!-- happenings -->
-    <!-- End New Stuff -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="index.html">Next Hike</a>
+            <a href="futurehike.html">Future Hike</a>
+            <div onclick="openModal('pnbContactModal')">Contact</div>
+        </div>
+    </div>
 
+    <!-- Main Content Container -->
+    <div class="container mt-5 pt-5">
+        <!-- Contact Modal -->
+        <section id="happenings" class="carousel-section mt-4">
+            <div id="route1Content"></div>
+            <!-- contact info stuff -->
+            <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pnbContactModalLabel">Hi!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="assets/underconstruction2.webp" class="img-fluid" alt="Under Construction">
+                            <!-- Detailed information for this hike goes here -->
+                            <p>Thanks for visiting. This site is under construction</p>
+                            <p>See you on the trails!</p>
+                            <p>Feel free to shoot me an email: pandbsoftware@gmail.com</p>
+                            <p>Also text me! Same number of old. - Jay</p>
+                            <img src="assets/contact/solo.jpg" class="img-fluid d-block mx-auto" alt="1989">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Next Hike Section -->
-    <div class="container">
+        <!-- Next Hike Section -->
         <section id="nexthike">
-          <div id="NextHike" class="hike-section-container">
+            <div id="NextHike" class="hike-section-container">
+                <div id="CarbonCanyonRedwoods">
+                    <div class="hike-header">
+                        <div class="hike-what">
+                            <div class="hike-label">WHAT:</div>
+                            <div class="hike-value">
+                                <a href="https://www.alltrails.com/trail/us/california/redwood-trail-and-carbon-canyon-dam-loop">Carbon Canyon Redwoods</a>
+                            </div>
+                        </div>
+                        <div class="hike-when">
+                            <div class="hike-label">WHEN:</div>
+                            <div class="hike-value">Saturday, June 21, 2025</div>
+                        </div>
+                        <div class="hike-where">
+                            <div class="hike-label">WHERE:</div>
+                            <div class="hike-value">
+                                <a href="https://maps.app.goo.gl/BAkMW7hHsFNrMw5r6">Olinda Ranch / Carbon Canyon</a>
+                            </div>
+                        </div>
+                        <div class="hike-time">
+                            <div class="hike-label">TIME:</div>
+                            <div class="hike-value">9:00AM</div>
+                        </div>
+                    </div>
 
+                    <!-- Distance Table -->
+                    <table class="distance-table">
+                        <thead>
+                            <tr>
+                                <th>Difficulty</th>
+                                <th>Miles</th>
+                                <th>Elevation Gain</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Easy</td>
+                                <td>4.3</td>
+                                <td>192'</td>
+                            </tr>
+                            <tr>
+                                <td>Moderate</td>
+                                <td>7.4</td>
+                                <td>421'</td>
+                            </tr>
+                            <tr>
+                                <td>Hard</td>
+                                <td>17.2</td>
+                                <td>1935'</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-            <div id="Descanso">
-              <div class="hike-header">
-                <div class="hike-what">
-                  <div class="hike-label">WHAT:</div>
-                  <div class="hike-value"><a href="https://www.alltrails.com/trail/us/california/marshall-canyon-trail">Marshall Canyon</a></div>
+                    <!-- Parking Info -->
+                    <div class="parking-info">
+                        <img src="assets/parking-icon.png" alt="Parking Icon">
+                        <p>
+                            <strong>Parking:</strong>
+                            <a href="https://maps.app.goo.gl/FNCAnRbokZ9SwBxW8" target="_blank" rel="noopener noreferrer">
+                                <b>Olinda Ranch Parking Lot</b>
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1738.664898790005!2d-117.83670806627669!3d33.92251582378129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd487233ba4db%3A0xd8d665ed8c53a7!2sOlinda%20Ranch%20Parking%20Lot!5e0!3m2!1sen!2sus!4v1750187303477!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="600" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+
+                    <!-- Air Quality Widget -->
+                    <script>
+                      (function(d, s, id) {
+                          if (d.getElementById(id)) {
+                              if (window.__TOMORROW__) {
+                                  window.__TOMORROW__.renderWidget();
+                              }
+                              return;
+                          }
+                          const fjs = d.getElementsByTagName(s)[0];
+                          const js = d.createElement(s);
+                          js.id = id;
+                          js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+              
+                          fjs.parentNode.insertBefore(js, fjs);
+                      })(document, 'script', 'tomorrow-sdk');
+                      </script>
+              
+                      <div class="tomorrow"
+                         data-location-id="113969"
+                         data-language="EN"
+                         data-unit-system="IMPERIAL"
+                         data-skin="light"
+                         data-widget-type="aqiPollen"
+                         style="padding-bottom:22px;position:relative;"
+                      >
+                        <a
+                          href="https://weather.tomorrow.io/"
+                          rel="nofollow noopener noreferrer"
+                          target="_blank"
+                          style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+                        >
+                          <img
+                            alt="Powered by Tomorrow.io"
+                            src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+                            width="250"
+                            height="18"
+                          />
+                        </a>
+                      </div> 
+       
+                    <!-- Trail Information and Maps -->
+                    <div id="carbon-footer">
+                        <div class="map-info">
+                            <img src="assets/MapVector2.png" alt="Map Icon">
+                        </div>
+
+                        <!-- Easy Trail -->
+                        <div class="circle">Easy</div>
+                        <p style="text-align: center;">4.3 Miles, 192' Elev Gain</p>
+                        <p class="gpx-link">
+                            <a href="assets/CarbonCanyonRedwoods/CarbonCanyonRedwoods4.gpx" class="gpx-download">📥 GPX Download</a>
+                        </p>
+                        <iframe 
+                            class="alltrails" 
+                            src="https://www.alltrails.com/widget/map/carbon-canyon-4mi-loop-f1e5284?u=i&sh=t1soyj" 
+                            width="100%" 
+                            height="400" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                        ></iframe>
+
+                        <!-- Moderate Trail -->
+                        <div class="blue-square">Med</div>
+                        <p style="text-align: center;">7.4 Miles, 421' Elev Gain</p>
+                        <p class="gpx-link">
+                            <a href="assets/CarbonCanyonRedwoods/CarbonCanyonRedwoods7.gpx" class="gpx-download">📥 GPX Download</a>
+                        </p>
+                        <iframe 
+                            class="alltrails" 
+                            src="https://www.alltrails.com/widget/map/carbon-canyon-7mi-loop-b1790a5?u=i&sh=t1soyj" 
+                            width="100%" 
+                            height="400" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                        ></iframe>
+
+                        <!-- Hard Trail -->
+                        <div class="black-diamond">Hard</div>
+                        <p style="text-align: center;">17.2 Miles, 1,935' Elev Gain</p>
+                        <p class="gpx-link">
+                            <a href="assets/CarbonCanyonRedwoods/CarbonCanyonRedwoods17.gpx" class="gpx-download">📥 GPX Download</a>
+                        </p>
+                        <iframe 
+                            class="alltrails" 
+                            src="https://www.alltrails.com/widget/map/cc-ch-peak-17mi-487d4c6?u=i&sh=t1soyj" 
+                            width="100%" 
+                            height="400" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                        ></iframe>
+                    </div>
                 </div>
-                <div class="hike-when">
-                  <div class="hike-label">WHEN:</div>
-                  <div class="hike-value">Saturday, June 7, 2025</div>
-                </div>
-                <div class="hike-where">
-                  <div class="hike-label">WHERE:</div>
-                  <div class="hike-value"><a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58">Oak Mesa Park / Marshall Canyon</a></div>
-                </div>
-                <div class="hike-time">
-                  <div class="hike-label">TIME:</div>
-                  <div class="hike-value">7:00AM</div>
-                </div>
-              </div>
+            </div>
+        </section>
 
-              <!-- -->
-              <table class="distance-table">
-                <thead>
-                  <tr>
-                    <th>Difficulty</th>
-                    <th>Miles</th>
-                    <th>Elevation Gain</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Easy</td>
-                    <td>4.5</td>
-                    <td>400'</td>
-                  </tr>
-                  <tr>
-                    <td>Moderate</td>
-                    <td>11</td>
-                    <td>1500'</td>
-                  </tr>
-                  <tr>
-                    <td>Hard</td>
-                    <td>12</td>
-                    <td>1700'</td>
-                  </tr>
-                </tbody>
-              </table>
+        <!-- Future Hike Button -->
+        <div class="text-center my-4">
+            <a href="futurehike.html" class="btn btn-primary btn-lg">See Future Hike</a>
+        </div>
+    </div>
 
-
-              <!-- Parking Info -->
-              <div class="parking-info">
-                <img src="assets/parking-icon.png" alt="Parking Icon">
-                <p>
-                  <strong>Parking:</strong>
-                  <a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58" target="_blank" rel="noopener noreferrer">
-                    <b>Oak Mesa Park</b>, 5400 Wheeler Ave, La Verne, CA 91750
-                  </a>
-                </p>
-              </div>
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6151923209063!2d-117.77839828780483!3d34.130599873015505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32f9b1e9de0b5%3A0x4cc43f81bed889fc!2sOak%20Mesa%20Park!5e0!3m2!1sen!2sus!4v1741846302226!5m2!1sen!2sus"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            
-              <!-- Air Quality Widget -->
-              <div class="aqi-widget-container d-flex flex-column align-items-center gap-3">
-                <div class="aqi-widget-wrapper">
-                  <div class="aqi-widget-item d-flex justify-content-center">
-                    <!-- La Verne AQI Widget -->
-                    <iframe title="La Verne AQI Dial" src="https://widget.airnow.gov/aq-dial-widget/?city=La%20Verne&state=CA&country=USA&transparent=true" style="border: none; border-radius: 0px;"; width="230"></iframe>
-                  </div>
-                </div>
-                <div class="aqi-widget-fallback" style="display: none;">
-                  <div class="alert alert-warning">
-                    <strong>Widget Loading Issue:</strong> The AQI widget is currently unavailable.<br>
-                    <small>Please check back later or visit <a href="https://www.airnow.gov/" target="_blank">AirNow.gov</a> for current air quality information.</small>
-                  </div>
-                </div>
-              </div>
-
-              <!-- WeatherWidget -->
-              <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
-                data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
-              </a>
-
-
-              <!-- Trail Information and Maps -->
-              <div id="marshall-footer">
-                <div class="map-info">
-                  <img src="assets/MapVector2.png" alt="Map Icon">
-                </div>
-
-                <div class="circle">Easy</div>
-                <p style="text-align: center;">4.5 Miles, 400' Elev Gain</p>
-                <p class="gpx-link">
-                  <a href="assets/marshallcanyon/MarshallCanyon5.gpx" class="gpx-download">📥 GPX Download</a>
-                </p>
-                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-5a499f6-15?u=i&sh=t1soyj"
-                  width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
-                </iframe>
-
-                <div class="blue-square">Med</div>
-                <p style="text-align: center;">11 Miles, 1,500' Elev Gain</p>
-                <p class="gpx-link">
-                  <a href="assets/marshallcanyon/MarshallCanyon11.gpx" class="gpx-download">📥 GPX Download</a>
-                </p>
-                <iframe class="alltrails"
-                  src="https://www.alltrails.com/widget/map/map-march-13-2025-ed27796?u=i&sh=t1soyj" width="100%"
-                  height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
-                </iframe>
-
-                <div class="black-diamond">Hard</div>
-                <p style="text-align: center;">12 Miles, 1,700' Elev Gain</p>
-                <p class="gpx-link">
-                  <a href="assets/marshallcanyon/MarshallCanyonBigLoop12.gpx" class="gpx-download">📥 GPX Download</a>
-                </p>
-                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/marshall-canyon-12-72f67e7?u=i&sh=t1soyj" 
-                  width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
-                </iframe>
-              </div> <!-- marshall-footer -->
-            </div> <!-- content -->
-          </div> <!-- MarshallCanyon -->
-        </div> <!-- NextHike -->
-      </section> <!-- nexthike -->
-      <div class="text-center my-4">
-        <a href="futurehike.html" class="btn btn-primary btn-lg">See Future Hike</a>
-      </div>
-    </div> <!-- Container Div -->
-
+    <!-- Scripts -->
     <script src="route-loader.js"></script>
     <!-- Bootstrap and Custom JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <!-- AQI Widget Error Handling -->
+    <script>
+        // Check if iframe is loaded
+        onload()
+        {
+            const iframe = document.querySelector('.aqi-widget-item iframe');
+            if (iframe && iframe.contentWindow && iframe.contentWindow.document.body.innerHTML.trim()) {
+                document.querySelector('.aqi-widget-fallback').style.display = 'none';
+            } else {
+                document.querySelector('.aqi-widget-fallback').style.display = 'block';
+            }
+        }
+
+        // Handle loading errors
+        onerror()
+        {
+            document.querySelector('.aqi-widget-fallback').style.display = 'block';
+        }
+
+        // Check after 5 seconds if it hasn't loaded
+        setTimeout(() => {
+            if (!iframe.contentWindow || !iframe.contentWindow.document.body.innerHTML.trim()) {
+                console.error('AQI widget timed out');
+                document.querySelector('.aqi-widget-fallback').style.display = 'block';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
     <script>
       // Add error handling for the AQI widget
       const iframe = document.querySelector('.aqi-widget-container iframe');

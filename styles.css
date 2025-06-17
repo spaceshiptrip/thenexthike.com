@@ -260,28 +260,23 @@ p {
   .gear-container {
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   }
-}  width: 40px; /* Consistent width */
-  height: 40px; /* Consistent height */
-  object-fit: contain; /* Ensure the icons are resized while keeping aspect ratio */
 }
 
-/* Responsive improvements for gear icons on smaller screens */
+/* Responsive improvements for smaller screens */
 @media (max-width: 600px) {
   .gear-container img {
     width: 25px;
     height: 25px;
   }
-}
 
-/* Responsive improvements for smaller screens */
-@media (max-width: 600px) {
   .hike-container {
-    grid-template-columns: 10% 90%; /* Adjusts layout for small screens */
+    grid-template-columns: 10% 90%;
   }
+
   .circle, .blue-square, .black-diamond {
-    width: 15vw;               /* Larger size for visibility on mobile */
+    width: 15vw;
     height: 15vw;
-    max-width: 50px;           /* Limits size for smaller screens */
+    max-width: 50px;
     max-height: 50px;
   }
 }
