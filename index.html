@@ -35,7 +35,9 @@
 
   <!-- Main Content Container -->
   <div class="container mt-5 pt-5">
+    <!-- Contact Modal -->
     <section id="happenings" class="carousel-section mt-4">
+      <div id="route1Content"></div>
       <!-- contact info stuff -->
       <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel"
         aria-hidden="true">
@@ -63,41 +65,33 @@
     <!-- End New Stuff -->
 
 
+    <!-- Next Hike Section -->
     <div class="container">
         <section id="nexthike">
           <div id="NextHike" class="hike-section-container">
-            <div id="Sturtevant">
+
+
+            <div id="Descanso">
               <div class="hike-header">
                 <div class="hike-what">
                   <div class="hike-label">WHAT:</div>
-                  <div class="hike-value"><a href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail">Sturtevant Falls</a></div>
+                  <div class="hike-value"><a href="https://www.alltrails.com/trail/us/california/marshall-canyon-trail">Marshall Canyon</a></div>
                 </div>
                 <div class="hike-when">
                   <div class="hike-label">WHEN:</div>
-                  <div class="hike-value">Saturday, October 25, 2025</div>
+                  <div class="hike-value">Saturday, Februrary 14, 2026</div>
                 </div>
                 <div class="hike-where">
                   <div class="hike-label">WHERE:</div>
-                  <div class="hike-value"><a href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5" target="_blank" rel="noopener noreferrer">Chantry Flat</a></div>
+                  <div class="hike-value"><a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58">Oak Mesa Park / Marshall Canyon</a></div>
                 </div>
                 <div class="hike-time">
                   <div class="hike-label">TIME:</div>
-                  <div class="hike-value">7:00 AM</div>
+                  <div class="hike-value">8:00AM</div>
                 </div>
               </div>
-              <div class="info-box">
-                <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-alert" viewBox="0 0 24 24" width="20" height="20" fill="#cc9900" style="vertical-align: middle; margin-right: 6px;">
-                    <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-                  </svg>
-                  <h4><strong>Note:</strong></h4> Parking Lot is really small. Expect lots of people to park on the side of the road.
-                  <br>
-                  <strong>Adventure Pass REQUIRED</strong>
-                  <br>
-                  <a href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail">All Trails Review</a>
-                </p>
-              </div>    
-              
+
+              <!-- -->
               <table class="distance-table">
                 <thead>
                   <tr>
@@ -108,38 +102,47 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Easy</td>
+                    <td>4.5</td>
+                    <td>400'</td>
+                  </tr>
+                  <tr>
                     <td>Moderate</td>
-                    <td>3.3</td>
-                    <td>708'</td>
+                    <td>11</td>
+                    <td>1500'</td>
                   </tr>
                   <tr>
                     <td>Hard</td>
-                    <td>14.1</td>
-                    <td>4213'</td>
+                    <td>12</td>
+                    <td>1700'</td>
                   </tr>
                 </tbody>
               </table>
 
 
-              <!-- <div class="content"> -->
+              <!-- Parking Info -->
               <div class="parking-info">
                 <img src="assets/parking-icon.png" alt="Parking Icon">
                 <p>
-                  <a href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5" target="_blank" rel="noopener noreferrer">
-                    <b>Chantry Flat</b>, Chantry Flat Rd, Arcadia, CA 91006
+                  <strong>Parking:</strong>
+                  <a href="https://maps.app.goo.gl/73FF6ym6oVMXZ5m58" target="_blank" rel="noopener noreferrer">
+                    <b>Oak Mesa Park</b>, 5400 Wheeler Ave, La Verne, CA 91750
                   </a>
                 </p>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.9795933030296!2d-118.02076109599895!3d34.19799432445623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2dc28852ccbf1%3A0x25fc4f860c696622!2sBig%20Santa%20Anita%20Canyon!5e0!3m2!1sen!2sus!4v1743699567716!5m2!1sen!2sus" 
-                      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6151923209063!2d-117.77839828780483!3d34.130599873015505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32f9b1e9de0b5%3A0x4cc43f81bed889fc!2sOak%20Mesa%20Park!5e0!3m2!1sen!2sus!4v1741846302226!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
               </iframe>
-
-
+            
               <!-- Air Quality Widget -->
               <div class="aqi-widget-container d-flex flex-column align-items-center gap-3">
                 <div class="aqi-widget-wrapper">
                   <div class="aqi-widget-item d-flex justify-content-center">
-                    <iframe title="Arcadia AQI Flag" height="450" src="https://widget.airnow.gov/aq-flag-widget/?z=91006&n=Arcadia,%20CA" style="border: none;" width="230"></iframe>
+                    <!-- La Verne AQI Widget -->
+                    <iframe title="La Verne AQI Dial" src="https://widget.airnow.gov/aq-dial-widget/?city=La%20Verne&state=CA&country=USA&transparent=true" style="border: none; border-radius: 0px;"; width="230"></iframe>
                   </div>
                 </div>
                 <div class="aqi-widget-fallback" style="display: none;">
@@ -151,44 +154,55 @@
               </div>
 
               <!-- WeatherWidget -->
-              <a class="weatherwidget-io" href="https://forecast7.com/en/34d14n118d04/arcadia/?unit=us" 
-                  data-label_1="ARCADIA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure" >ARCADIA WEATHER
+              <a class="weatherwidget-io" href="https://forecast7.com/en/34d10n117d77/la-verne/?unit=us"
+                data-label_1="LA VERNE" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure">LA VERNE WEATHER
               </a>
 
 
-
-              <div id="sturtevant-footer">
+              <!-- Trail Information and Maps -->
+              <div id="marshall-footer">
                 <div class="map-info">
                   <img src="assets/MapVector2.png" alt="Map Icon">
                 </div>
 
-                <div class="blue-square">Med</div>
-                <p style="text-align: center;">3.3 Miles, 750' Elev Gain</p>
+                <div class="circle">Easy</div>
+                <p style="text-align: center;">4.5 Miles, 400' Elev Gain</p>
                 <p class="gpx-link">
-                  <a href="assets/sturtevant/SturtevantFallsTrail.gpx" class="gpx-download">📥 GPX Download</a>
+                  <a href="assets/marshallcanyon/MarshallCanyon5.gpx" class="gpx-download">📥 GPX Download</a>
                 </p>
-                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/sturtevant-falls-trail-06d5ae1?u=i&sh=t1soyj" 
-                        width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                        title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/map-5a499f6-15?u=i&sh=t1soyj"
+                  width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+                </iframe>
+
+                <div class="blue-square">Med</div>
+                <p style="text-align: center;">11 Miles, 1,500' Elev Gain</p>
+                <p class="gpx-link">
+                  <a href="assets/marshallcanyon/MarshallCanyon11.gpx" class="gpx-download">📥 GPX Download</a>
+                </p>
+                <iframe class="alltrails"
+                  src="https://www.alltrails.com/widget/map/map-march-13-2025-ed27796?u=i&sh=t1soyj" width="100%"
+                  height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
                 </iframe>
 
                 <div class="black-diamond">Hard</div>
-                <p style="text-align: center;">14.1 Miles, 4,213' Elev Gain</p>
+                <p style="text-align: center;">12 Miles, 1,700' Elev Gain</p>
                 <p class="gpx-link">
-                  <a href="assets/sturtevant/SturtevantWilsonWinterCreek.gpx" class="gpx-download">📥 GPX Download</a>
+                  <a href="assets/marshallcanyon/MarshallCanyonBigLoop12.gpx" class="gpx-download">📥 GPX Download</a>
                 </p>
-                <iframe class="alltrails" 
-                  src="https://www.alltrails.com/widget/recording/los-angeles-county-trail-running-c8afe80?u=i&sh=t1soyj" 
+                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/marshall-canyon-12-72f67e7?u=i&sh=t1soyj" 
                   width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
                   title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
                 </iframe>
-              </div> <!-- sturtevant-footer -->
-          </div> <!-- Sturtevant -->
+              </div> <!-- marshall-footer -->
+            </div> <!-- content -->
+          </div> <!-- MarshallCanyon -->
         </div> <!-- NextHike -->
       </section> <!-- nexthike -->
       <div class="text-center my-4">
-        <!-- <a href="index.html" class="btn btn-primary btn-lg">See Next Hike</a> -->
         <a href="futurehike.html" class="btn btn-primary btn-lg">See Future Hike</a>
+        <!-- <a href="index.html" class="btn btn-primary btn-lg">See Next Hike</a> -->
       </div>
     </div> <!-- Container Div -->
 
@@ -197,6 +211,51 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- AQI Widget Error Handling -->
+    <script>
+      // Add error handling for the AQI widget
+      const iframe = document.querySelector('.aqi-widget-container iframe');
+      const fallback = document.querySelector('.aqi-widget-fallback');
+
+      if (!iframe) {
+        console.error('AQI iframe element not found');
+        fallback.style.display = 'block';
+        return;
+      }
+
+      // Check if iframe is loaded
+      iframe.onload = function() {
+        console.log('AQI widget loaded');
+        try {
+          const content = iframe.contentWindow.document.body.innerHTML.trim();
+          if (!content) {
+            console.error('AQI widget loaded but is empty');
+            fallback.style.display = 'block';
+            iframe.style.display = 'none';
+          }
+        } catch (e) {
+          console.error('Error accessing iframe content:', e);
+          fallback.style.display = 'block';
+          iframe.style.display = 'none';
+        }
+      };
+
+      // Handle loading errors
+      iframe.onerror = function() {
+        console.error('AQI widget failed to load');
+        fallback.style.display = 'block';
+        iframe.style.display = 'none';
+      };
+
+      // Check after 5 seconds if it hasn't loaded
+      setTimeout(() => {
+        if (!iframe.contentWindow || !iframe.contentWindow.document.body.innerHTML.trim()) {
+          console.error('AQI widget timed out');
+          fallback.style.display = 'block';
+          iframe.style.display = 'none';
+        }
+      }, 5000);
+    </script>
 
     <footer class="site-footer">
     <p>© Just Around the Corner Hiking Club • Est. 2023</p>
@@ -209,6 +268,8 @@
       <a href="https://github.com/spaceshiptrip">SpaceshipTrip</a>
     </p>
   </footer>
+
+  <!-- WeatherWidget -->
   <script defer>
     !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
   </script>
