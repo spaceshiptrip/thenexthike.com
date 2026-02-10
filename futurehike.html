@@ -1,76 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE NEXT HIKE</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THE NEXT HIKE</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <!-- Top bar with the brand name and hamburger menu -->
+    <div class="top-bar">
+      <div class="brand-name">
+        <a href="index.html">THE NEXT HIKE</a>
+      </div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="menu">
+        <a href="index.html">Next Hike</a>
+        <a href="futurehike.html">Future Hike</a>
 
-<body>
-
-  <!-- Top bar with the brand name and hamburger menu -->
-  <div class="top-bar">
-    <div class="brand-name">
-      <a href="index.html">THE NEXT HIKE</a>
+        <div onclick="openModal('pnbContactModal')">Contact</div>
+      </div>
     </div>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="menu">
-      <a href="index.html">Next Hike</a>
-      <a href="futurehike.html">Future Hike</a>
 
-      <div onclick="openModal('pnbContactModal')">Contact</div>
-    </div>
-  </div>
+    <!-- Start New Stuff -->
 
-  <!-- Start New Stuff -->
-
-  <!-- Main Content Container -->
-  <div class="container mt-5 pt-5">
-    <section id="happenings" class="carousel-section mt-4">
-      <!-- contact info stuff -->
-      <div class="modal fade" id="pnbContactModal" tabindex="-1" aria-labelledby="pnbContactModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="pnbContactModalLabel">Hi!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img src="assets/underconstruction2.webp" class="img-fluid" alt="Under Construction">
-              <!-- Detailed information for this hike goes here -->
-              <p>Thanks for visiting. This site is under construction</p>
-              <p>See you on the trails!</p>
-              <p>Feel free to shoot me an email: pandbsoftware@gmail.com</p>
-              <p>Also text me! Same number of old. - Jay</p>
-              <img src="assets/contact/solo.jpg" class="img-fluid d-block mx-auto" alt="1989">
+    <!-- Main Content Container -->
+    <div class="container mt-5 pt-5">
+      <section id="happenings" class="carousel-section mt-4">
+        <!-- contact info stuff -->
+        <div
+          class="modal fade"
+          id="pnbContactModal"
+          tabindex="-1"
+          aria-labelledby="pnbContactModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="pnbContactModalLabel">Hi!</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img
+                  src="assets/underconstruction2.webp"
+                  class="img-fluid"
+                  alt="Under Construction"
+                />
+                <!-- Detailed information for this hike goes here -->
+                <p>Thanks for visiting. This site is under construction</p>
+                <p>See you on the trails!</p>
+                <p>Feel free to shoot me an email: pandbsoftware@gmail.com</p>
+                <p>Also text me! Same number of old. - Jay</p>
+                <img
+                  src="assets/contact/solo.jpg"
+                  class="img-fluid d-block mx-auto"
+                  alt="1989"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div> <!-- pnbContactModal -->
-    </section> <!-- happenings -->
-    <!-- End New Stuff -->
+        <!-- pnbContactModal -->
+      </section>
+      <!-- happenings -->
+      <!-- End New Stuff -->
 
-
-    <div class="container">
+      <div class="container">
         <section id="nexthike">
           <div id="NextHike" class="hike-section-container">
             <div id="Sturtevant">
               <div class="hike-header">
                 <div class="hike-what">
                   <div class="hike-label">WHAT:</div>
-                  <div class="hike-value"><a href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail">Sturtevant Falls</a></div>
+                  <div class="hike-value">
+                    <a
+                      href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail"
+                      >Sturtevant Falls</a
+                    >
+                  </div>
                 </div>
                 <div class="hike-when">
                   <div class="hike-label">WHEN:</div>
@@ -78,7 +103,14 @@
                 </div>
                 <div class="hike-where">
                   <div class="hike-label">WHERE:</div>
-                  <div class="hike-value"><a href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5" target="_blank" rel="noopener noreferrer">Chantry Flat</a></div>
+                  <div class="hike-value">
+                    <a
+                      href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Chantry Flat</a
+                    >
+                  </div>
                 </div>
                 <div class="hike-time">
                   <div class="hike-label">TIME:</div>
@@ -86,18 +118,33 @@
                 </div>
               </div>
               <div class="info-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon-alert"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="#cc9900"
+                  style="vertical-align: middle; margin-right: 6px"
+                >
+                  <path
+                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                  />
+                </svg>
+                <h4><strong>Note:</strong></h4>
                 <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-alert" viewBox="0 0 24 24" width="20" height="20" fill="#cc9900" style="vertical-align: middle; margin-right: 6px;">
-                    <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-                  </svg>
-                  <h4><strong>Note:</strong></h4> Parking Lot is really small. Expect lots of people to park on the side of the road.
-                  <br>
+                  Parking Lot is really small. Expect lots of people to park on
+                  the side of the road.
+                  <br />
                   <strong>Adventure Pass REQUIRED</strong>
-                  <br>
-                  <a href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail">All Trails Review</a>
+                  <br />
+                  <a
+                    href="https://www.alltrails.com/trail/us/california/sturtevant-falls-trail"
+                    >All Trails Review</a
+                  >
                 </p>
-              </div>    
-              
+              </div>
+
               <table class="distance-table">
                 <thead>
                   <tr>
@@ -120,77 +167,135 @@
                 </tbody>
               </table>
 
-
               <!-- <div class="content"> -->
               <div class="parking-info">
-                <img src="assets/parking-icon.png" alt="Parking Icon">
+                <img src="assets/parking-icon.png" alt="Parking Icon" />
                 <p>
-                  <a href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://maps.app.goo.gl/X4wFYCu36R8PR9rq5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <b>Chantry Flat</b>, Chantry Flat Rd, Arcadia, CA 91006
                   </a>
                 </p>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.9795933030296!2d-118.02076109599895!3d34.19799432445623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2dc28852ccbf1%3A0x25fc4f860c696622!2sBig%20Santa%20Anita%20Canyon!5e0!3m2!1sen!2sus!4v1743699567716!5m2!1sen!2sus" 
-                      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.9795933030296!2d-118.02076109599895!3d34.19799432445623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2dc28852ccbf1%3A0x25fc4f860c696622!2sBig%20Santa%20Anita%20Canyon!5e0!3m2!1sen!2sus!4v1743699567716!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
               </iframe>
 
-
               <!-- Air Quality Widget -->
-              <div class="aqi-widget-container d-flex flex-column align-items-center gap-3">
+              <div
+                class="aqi-widget-container d-flex flex-column align-items-center gap-3"
+              >
                 <div class="aqi-widget-wrapper">
                   <div class="aqi-widget-item d-flex justify-content-center">
-                    <iframe title="Arcadia AQI Flag" height="450" src="https://widget.airnow.gov/aq-flag-widget/?z=91006&n=Arcadia,%20CA" style="border: none;" width="230"></iframe>
+                    <iframe
+                      title="Arcadia AQI Flag"
+                      height="450"
+                      src="https://widget.airnow.gov/aq-flag-widget/?z=91006&n=Arcadia,%20CA"
+                      style="border: none"
+                      width="230"
+                    ></iframe>
                   </div>
                 </div>
-                <div class="aqi-widget-fallback" style="display: none;">
+                <div class="aqi-widget-fallback" style="display: none">
                   <div class="alert alert-warning">
-                    <strong>Widget Loading Issue:</strong> The AQI widget is currently unavailable.<br>
-                    <small>Please check back later or visit <a href="https://www.airnow.gov/" target="_blank">AirNow.gov</a> for current air quality information.</small>
+                    <strong>Widget Loading Issue:</strong> The AQI widget is
+                    currently unavailable.<br />
+                    <small
+                      >Please check back later or visit
+                      <a href="https://www.airnow.gov/" target="_blank"
+                        >AirNow.gov</a
+                      >
+                      for current air quality information.</small
+                    >
                   </div>
                 </div>
               </div>
 
               <!-- WeatherWidget -->
-              <a class="weatherwidget-io" href="https://forecast7.com/en/34d14n118d04/arcadia/?unit=us" 
-                  data-label_1="ARCADIA" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="pure" >ARCADIA WEATHER
+              <a
+                class="weatherwidget-io"
+                href="https://forecast7.com/en/34d14n118d04/arcadia/?unit=us"
+                data-label_1="ARCADIA"
+                data-label_2="WEATHER"
+                data-icons="Climacons Animated"
+                data-theme="pure"
+                >ARCADIA WEATHER
               </a>
-
-
 
               <div id="sturtevant-footer">
                 <div class="map-info">
-                  <img src="assets/MapVector2.png" alt="Map Icon">
+                  <img src="assets/MapVector2.png" alt="Map Icon" />
                 </div>
 
                 <div class="blue-square">Med</div>
-                <p style="text-align: center;">3.3 Miles, 750' Elev Gain</p>
+                <p style="text-align: center">3.3 Miles, 750' Elev Gain</p>
                 <p class="gpx-link">
-                  <a href="assets/sturtevant/SturtevantFallsTrail.gpx" class="gpx-download">📥 GPX Download</a>
+                  <a
+                    href="assets/sturtevant/SturtevantFallsTrail.gpx"
+                    class="gpx-download"
+                    >📥 GPX Download</a
+                  >
                 </p>
-                <iframe class="alltrails" src="https://www.alltrails.com/widget/map/sturtevant-falls-trail-06d5ae1?u=i&sh=t1soyj" 
-                        width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                        title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+                <iframe
+                  class="alltrails"
+                  src="https://www.alltrails.com/widget/map/sturtevant-falls-trail-06d5ae1?u=i&sh=t1soyj"
+                  width="100%"
+                  height="400"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                >
                 </iframe>
 
                 <div class="black-diamond">Hard</div>
-                <p style="text-align: center;">14.1 Miles, 4,213' Elev Gain</p>
+                <p style="text-align: center">14.1 Miles, 4,213' Elev Gain</p>
                 <p class="gpx-link">
-                  <a href="assets/sturtevant/SturtevantWilsonWinterCreek.gpx" class="gpx-download">📥 GPX Download</a>
+                  <a
+                    href="assets/sturtevant/SturtevantWilsonWinterCreek.gpx"
+                    class="gpx-download"
+                    >📥 GPX Download</a
+                  >
                 </p>
-                <iframe class="alltrails" 
-                  src="https://www.alltrails.com/widget/recording/los-angeles-county-trail-running-c8afe80?u=i&sh=t1soyj" 
-                  width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running">
+                <iframe
+                  class="alltrails"
+                  src="https://www.alltrails.com/widget/recording/los-angeles-county-trail-running-c8afe80?u=i&sh=t1soyj"
+                  width="100%"
+                  height="400"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                >
                 </iframe>
-              </div> <!-- sturtevant-footer -->
-          </div> <!-- Sturtevant -->
-        </div> <!-- NextHike -->
-      </section> <!-- nexthike -->
-      <div class="text-center my-4">
-        <a href="index.html" class="btn btn-primary btn-lg">See Next Hike</a>
-        <!-- <a href="futurehike.html" class="btn btn-primary btn-lg">See Future Hike</a> -->
+              </div>
+              <!-- sturtevant-footer -->
+            </div>
+            <!-- Sturtevant -->
+          </div>
+          <!-- NextHike -->
+        </section>
+        <!-- nexthike -->
+        <div class="text-center my-4">
+          <a href="index.html" class="btn btn-primary btn-lg">See Next Hike</a>
+          <!-- <a href="futurehike.html" class="btn btn-primary btn-lg">See Future Hike</a> -->
+        </div>
       </div>
-    </div> <!-- Container Div -->
+      <!-- Container Div -->
+    </div>
+    <!--  CLOSE: container mt-5 pt-5 -->
 
     <script src="route-loader.js"></script>
     <!-- Bootstrap and Custom JS -->
@@ -199,30 +304,51 @@
     <script src="script.js"></script>
 
     <footer class="site-footer">
-    <p>© Just Around the Corner Hiking Club • Est. 2023</p>
-    <p>
-      Powered by 
-      <a href="https://github.com/spaceshiptrip/thenexthike.com" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a> 
-      for 
-      <a href="https://github.com/spaceshiptrip">SpaceshipTrip</a>
-    </p>
+      <p>© Just Around the Corner Hiking Club • Est. 2023</p>
+      <p>
+        Powered by
+        <a
+          href="https://github.com/spaceshiptrip/thenexthike.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        for
+        <a href="https://github.com/spaceshiptrip">SpaceshipTrip</a>
+      </p>
 
-<a href="https://github.com/spaceshiptrip/thenexthike.com"
-   target="_blank" rel="noopener noreferrer"
-   style="display:inline-block; text-decoration:none;">
-    <img
-      src="assets/logo.png"
-      alt="SpaceshipTrip logo"
-      class="footer-logo"
-      style="width:140px; max-width:140px; height:auto; display:block; margin:0 auto 10px;"
-    />
-  </a>
-  </footer>
-  <script defer>
-    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-  </script>
-</body>
-
+      <a
+        href="https://github.com/spaceshiptrip/thenexthike.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="display: inline-block; text-decoration: none"
+      >
+        <img
+          src="assets/logo.png"
+          alt="SpaceshipTrip logo"
+          class="footer-logo"
+          style="
+            width: 140px;
+            max-width: 140px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+          "
+        />
+      </a>
+    </footer>
+    <script defer>
+      !(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://weatherwidget.io/js/widget.min.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      })(document, "script", "weatherwidget-io-js");
+    </script>
+  </body>
 </html>
