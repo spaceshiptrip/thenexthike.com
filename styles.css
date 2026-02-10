@@ -774,14 +774,19 @@ p {
   margin: 20px auto; /* Centers it */
 }
 
+
 .site-footer {
   text-align: center;
-  padding: 1em 0;
-  background-color: #f5f5f5;
-  color: #555;
+  padding: 1.5em 0;
+
+  /* match logo background */
+  background-color: #0b1630;
+
+  color: #ffffff;
   font-size: 0.9em;
   margin-top: 40px;
-  border-top: 1px solid #ccc;
+
+  border-top: none;
 }
 
 .site-footer p {
@@ -954,3 +959,20 @@ dl dd {
   border-color: #205d5c;
 }
 
+
+
+/* Footer logo sizing fix (force) */
+.site-footer img.footer-logo {
+  width: 140px !important;
+  max-width: 140px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+
+/* FORCE footer color */
+footer.site-footer {
+  background-color: #0b1630 !important;
+  color: white !important;
+}
