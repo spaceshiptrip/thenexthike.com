@@ -205,6 +205,7 @@
         <!-- <a href="index.html" class="btn btn-primary btn-lg">See Next Hike</a> -->
       </div>
     </div> <!-- Container Div -->
+  </div> <!-- ✅ CLOSE: container mt-5 pt-5 -->
 
     <script src="route-loader.js"></script>
     <!-- Bootstrap and Custom JS -->
@@ -219,55 +220,52 @@
 
       if (!iframe) {
         console.error('AQI iframe element not found');
-        fallback.style.display = 'block';
-        return;
+        if (fallback) fallback.style.display = 'block';
       }
 
       // Check if iframe is loaded
       iframe.onload = function() {
         console.log('AQI widget loaded');
-        try {
-          const content = iframe.contentWindow.document.body.innerHTML.trim();
-          if (!content) {
-            console.error('AQI widget loaded but is empty');
-            fallback.style.display = 'block';
-            iframe.style.display = 'none';
-          }
-        } catch (e) {
-          console.error('Error accessing iframe content:', e);
-          fallback.style.display = 'block';
-          iframe.style.display = 'none';
-        }
       };
 
       // Handle loading errors
       iframe.onerror = function() {
         console.error('AQI widget failed to load');
-        fallback.style.display = 'block';
+        if (fallback) fallback.style.display = 'block';
         iframe.style.display = 'none';
       };
 
       // Check after 5 seconds if it hasn't loaded
       setTimeout(() => {
-        if (!iframe.contentWindow || !iframe.contentWindow.document.body.innerHTML.trim()) {
-          console.error('AQI widget timed out');
-          fallback.style.display = 'block';
-          iframe.style.display = 'none';
-        }
       }, 5000);
     </script>
 
-    <footer class="site-footer">
-    <p>© Just Around the Corner Hiking Club • Est. 2023</p>
-    <p>
-      Powered by 
-      <a href="https://github.com/spaceshiptrip/thenexthike.com" target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a> 
-      for 
-      <a href="https://github.com/spaceshiptrip">SpaceshipTrip</a>
-    </p>
-  </footer>
+
+
+<footer class="site-footer">
+  <p>© Just Around the Corner Hiking Club • Est. 2023</p>
+  <p>
+    Powered by
+    <a href="https://github.com/spaceshiptrip/thenexthike.com" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+    for
+    <a href="https://github.com/spaceshiptrip" target="_blank" rel="noopener noreferrer">
+      SpaceshipTrip
+    </a>
+  </p>
+
+<a href="https://github.com/spaceshiptrip/thenexthike.com"
+   target="_blank" rel="noopener noreferrer"
+   style="display:inline-block; text-decoration:none;">
+    <img
+      src="assets/logo.png"
+      alt="SpaceshipTrip logo"
+      class="footer-logo"
+      style="width:140px; max-width:140px; height:auto; display:block; margin:0 auto 10px;"
+    />
+  </a>
+</footer>
 
   <!-- WeatherWidget -->
   <script defer>
